@@ -757,138 +757,92 @@
 
 
   /* ---------------------   - Section DropDown -------------------- */
-  .dropdown2 {
-    margin-bottom: 1rem;
-  }
 
-  .setText {
-    padding-left: 0.2rem !important;
-    padding-top: 0.8rem !important;
-    /* width: 100%; */
-  }
+  .paint-calculator-down {
+        width: 100% !important;
+        max-height: 300px !important;
+        overflow-y: auto;
+      }
+      /* contractor-filter-box ScrollBar width control */
+      .paint-calculator-down::-webkit-scrollbar {
+        width: 3px !important;
+      }
 
-  .fieldText {
-    margin-left: -2px !important;
-  }
+      .paint-calculator-down::-webkit-scrollbar-thumb {
+        background-color: #9ca3af !important;
+      }
 
-  .mainBox {
-    position: relative !important;
-    background: #fff;
-    z-index: 99;
-    top: 100%;
-    /* Position below the parent container */
-    left: 0;
-    /* Align with the left edge of the parent container */
-    width: 100%;
-    /* Occupy full width */
-  }
+      .calculator-dropdown {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        color: #333e50 !important;
+        font-family: Manrope !important;
+        font-size: 12px !important;
+        font-style: normal !important;
+        font-weight: 500 !important;
+        line-height: 22px !important;
+        white-space: nowrap !important;
+        width: 100% !important;
+        text-align: start !important;
+        /* background: #fff !important; */
+        border-radius: 0 !important;
+        padding: 10px 0px 5px 0px !important;
+        border-bottom: 1px solid var(--Neutral-Neutral-100, #F3F4F6);
+           background: var(--Neutral-Neutral-0, #FFF);
+      }
 
-  .box {
-    margin-top: 0.6rem;
-    border: 1px solid grey;
-    border-radius: 5px;
-    padding: -2px;
-    /* Note: Padding cannot be negative. */
-    position: absolute;
-    background-color: white;
-    width: 103% !important;
-    max-height: 200px !important;
-    overflow-y: auto;
-    display: none;
-  }
+      .contractor-filter-dropdown-option {
+        width: 100%;
+        border-radius: 0 !important;
+        position: absolute !important;
+        top: 100%;
+        left: 0;
+        z-index: 1000;
+        display: none;
+        float: left;
+        min-width: 10rem;
+        padding: 0 !important; /* Adjust padding as needed */
+        margin: 0.2rem 0 !important;
+        font-size: 12px;
+        color: #354257;
+        text-align: left;
+        list-style: none;
+        background-color: #ffffff;
+        background-clip: padding-contractor-filter-box;
+        border: 1px solid #ebf0f9;
+        border-radius: 0.25rem;
 
-  /* box ScrollBar width control */
-  .box::-webkit-scrollbar {
-    width: 3px !important;
-  }
-
-  .box::-webkit-scrollbar-thumb {
-    background-color: #9ca3af !important;
-  }
-
-  .selectField {
-    border: none;
-    border-bottom: 1px solid #ccc;
-    background-color: transparent;
-    width: 104%;
-    box-sizing: border-box;
-    display: flex;
-    color: var(--neutral-neutral-400, #9ca3af);
-    align-items: center;
-    font-family: "font-red-hat-regular";
-    justify-content: space-between;
-    cursor: pointer;
-    height: 2.4rem;
-  }
-
-  .list {
-    width: 100%;
-    background-color: #ffffff;
-    border-radius: 5px;
-    overflow: hidden;
-  }
-
-  .options {
-    display: flex;
-    padding: 8px 16px;
-    align-items: center;
-    gap: 8px;
-    align-self: stretch;
-    color: var(--neutral-neutral-500, #6b7280);
-    /* Body/14px: Medium */
-    font-family: Rad Hat Display;
-    font-size: 14px;
-    font-style: normal;
-    font-weight: 500;
-    line-height: 24px;
-    /* 171.429% */
-    width: 100%;
-    list-style: none;
-    cursor: pointer;
-    box-sizing: border-box;
-    background-color: #fff;
-    position: relative;
-    border-radius: 5px;
-  }
-
-  .options p {
-    margin: 0 !important;
-    margin-bottom: 0 !important;
-  }
-
-  .defaultText {
-    color: var(--neutral-neutral-400, #9ca3af);
-    /* Body/14px: Regular */
-    font-family: "font-red-hat-regular";
-    font-size: 14px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 24px;
-    /* 171.429% */
-    padding-left: 0.4rem;
-    padding-right: 0.3rem !important;
-    padding-top: -0.4rem !important;
-    /* Change the width as per your design */
-    white-space: nowrap;
-    /* Prevents text from wrapping to the next line */
-    overflow-x: hidden;
-  }
-
-  .selectText {
-    color: var(--orange-300, #b96e1d);
-    /* Body/14px: Medium */
-    font-family: "font-red-hat-medium";
-    font-size: 14px;
-    font-style: normal;
-    font-weight: 500;
-    line-height: 24px;
-    /* 171.429% */
-    white-space: nowrap;
-    overflow-x: hidden;
-  }
-
-  .options:hover {
-    background: var(--brown-100, #f6ede5);
+      }
+      .filter-dropdown-item {
+        padding: 8px 10px !important;
+        clear: both;
+        /* color: #354257;
+        text-align: left;
+        background-color: transparent;
+        border: 0;
+        cursor: pointer;
+        font-size: 12px;
+        white-space: unset !important;
+        font-style: normal;
+        font-weight: 400 !important;
+        line-height: 22px !important;
+        height: auto !important;
+        overflow: hidden !important; */
+        word-wrap: break-word !important; /* Ensure this property is present */
+        overflow: hidden;
+color: var(--Neutral-Neutral-700, #374151);
+text-overflow: ellipsis;
+font-family: "Red Hat Display";
+font-size: 16px;
+font-style: normal;
+font-weight: 500;
+line-height: 24px; /* 150% */
+        
+        
+      }
+      .filter-dropdown-item:hover{
+        background: var(--brown-100, #f6ede5);
     color: var(--brown-primary, #966239) !important;
 
     /* Body/14px: Medium */
@@ -897,9 +851,69 @@
     font-style: normal;
     font-weight: 500;
     line-height: 24px;
-    /* 171.429% */
-  }
+        
+      }
 
+      @media (max-width: 767.98px) {
+        .ellip {
+          white-space: nowrap;
+          width: 280px;
+          overflow: hidden;
+          -o-text-overflow: ellipsis;
+          -ms-text-overflow: ellipsis;
+          text-overflow: ellipsis;
+          pointer-events: none; /* Add this line */
+        }
+        /* .fill-listlabel{
+          display: none;
+        } */
+      }
+      .contractor-filter-dropdown-menu {
+        display: none;
+      }
+      .contractor-filter-dropdown-menu.show {
+        display: block;
+      }
+      .hidden {
+        display: none;
+      }
+
+      /* Chrome, Safari, Edge, Opera */
+      input::-webkit-outer-spin-button,
+      input::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+      }
+
+      /* Firefox */
+      input[type="number"] {
+        -moz-appearance: textfield;
+      }
+
+      .form-label{
+        color: var(--Neutral-Neutral-700, #374151);
+font-family: "Red Hat Display";
+font-size: 14px;
+font-style: normal;
+font-weight: 400;
+line-height: 24px; /* 171.429% */
+text-transform: capitalize;
+padding-top: 10px;
+      }
+      .ellip{
+        overflow: hidden;
+color: var(--Neutral-Neutral-500, #6B7280);
+text-overflow: ellipsis;
+
+/* Body/14px: Regular */
+font-family: "Red Hat Display";
+font-size: 14px;
+font-style: normal;
+font-weight: 400;
+line-height: 24px; /* 171.429% */
+      }
+  
+/* ---------------------------------ENd Dropdown===================================== */
   .whoim {
     overflow: hidden;
     color: var(--Neutral-Neutral-700, #374151);
@@ -1003,36 +1017,46 @@
             </div>
           </div>
           <!-- end input with length -->
-          <div class="row">
-            <div class="row WrapperRowTextDrop">
+          <!-- <div class="row"> -->
+            <!-- <div class="row WrapperRowTextDrop">
               <p class="textDropdown">
                 Select the Products you want to apply
               </p>
-            </div>
-            <!-- dropdown -->
+            </div> -->
+            <!-- dropdown ==============================================-->
             <div class="row p-3 selectBoxItomDrop">
-              <!-- desktop dropdown============================ -->
-              <div class="fill-listlabel">
-                <div>
-                  <div class="selectField fieldText" id="form3rest" onclick="toggleDropdown()">
-                    <span class="defaultText setText whoim" id="myBackground" tabindex="0"
-                      style="color: #374151;">Allwood Italian PU Clear Gloss</span>
-                    <img class="grayarrow arrow-toggel" src="./Images/iconamoon_arrow-up-2-light.png" alt="" />
-                  </div>
-                  <div class="mainBox">
-                    <ul class="hide box box3 showListOptions">
-                      <li class="options" tabindex="0" data-target="#btn3">
-                        <p>Allwood Italian PU Clear Gloss</p>
-                      </li>
-                    </ul>
-                  </div>
+               
+          <div class="fill-listlabel" >
+            <div class="mb-3">
+              <label for="agency" class="form-label"> Select the Products you want to apply</label>
+              <!-- first dropdown -->
+              <div class="input-group">
+                <div
+                  id="id_paint_field_calculator-Button"
+                  class="calculator-dropdown  dropdown-toggle-split"
+                  type="button"
+                  data-bs-toggle="dropdown"
+                  aria-haspopup="true"
+                  aria-expanded="false"
+                >
+                  <span id="product-paint" class="ellip dropdown-value"
+                    >Ratings</span
+                  >
+                 <div> <img src="./Images/Vector.png"></div>
                 </div>
-              </div>
-              <!-- end dropdown  -->
-
+                <ul
+                  class="contractor-filter-dropdown-menu contractor-filter-dropdown-option paint-calculator-down"
+                  id="id_type_of_paint"
+                ></ul>
+              </div>  
             </div>
-            <!-- dropdownend -->
           </div>
+        
+         </div>
+         <!-- </div> -->
+           <!-- end dropdown==================================================================  -->
+
+           <!-- estimeted cost box start================================================== -->
 
           <div class="totalAmtCost">
             <div class="total-first">
@@ -1660,17 +1684,17 @@
     // increment select itom
 
     // desktop dropdown
-    function toggleDropdown() {
+    // function toggleDropdown() {
       //  Get the dropdown element
-      const dropdown = document.querySelector(".box");
+      // const dropdown = document.querySelector(".box");
 
       //  Toggle the display of the dropdown
-      if (dropdown.style.display === "block") {
-        dropdown.style.display = "none";
-      } else {
-        dropdown.style.display = "block";
-      }
-    }
+      // if (dropdown.style.display === "block") {
+        // dropdown.style.display = "none";
+      // } else {
+        // dropdown.style.display = "block";
+      // }
+    // }
 
     let cnt = 0;
     let cnt2 = 0;
@@ -2003,14 +2027,110 @@
     }
 
 
+// ==============================dropdown================================
+
+
+
+
+function paintDrop() {
+        function initializeDropdown(buttonId, menuId, valueId, options) {
+          var dropdownButton = document.getElementById(buttonId);
+          var dropdownMenu = document.getElementById(menuId);
+          var valueElement = document.getElementById(valueId);
+
+          dropdownButton.addEventListener("click", function (event) {
+            event.stopPropagation(); // Preventing event from bubbling up
+
+            // Close all other dropdown menus
+            closeAllDropdowns();
+
+            dropdownMenu.classList.toggle("show");
+          });
+
+          valueElement.addEventListener("click", function (event) {
+            event.stopPropagation(); // Preventing event from bubbling up
+
+            // Close all other dropdown menus
+            closeAllDropdowns();
+
+            dropdownMenu.classList.toggle("show");
+          });
+
+          dropdownMenu
+            .querySelectorAll(".filter-dropdown-item")
+            .forEach(function (item) {
+              item.addEventListener("click", function (event) {
+                event.stopPropagation(); // Preventing event from bubbling up
+                valueElement.textContent = this.textContent;
+                dropdownMenu.classList.remove("show");
+              });
+            });
+
+          // Adding event listener to close dropdown when clicking outside
+          document.addEventListener("click", function (event) {
+            if (
+              !event.target.matches("#" + buttonId) &&
+              !event.target.matches(".filter-dropdown-item")
+            ) {
+              dropdownMenu.classList.remove("show");
+            }
+          });
+
+          // Populate options
+          options.forEach(function (option) {
+            let li = document.createElement("li");
+            li.classList.add("filter-dropdown-item");
+            li.textContent = option;
+            dropdownMenu.appendChild(li);
+            // Add option click event listener
+            li.addEventListener("click", function () {
+              valueElement.textContent = option;
+              dropdownMenu.classList.remove("show");
+            });
+          });
+
+          // Function to close all dropdown menus
+          function closeAllDropdowns() {
+            document
+              .querySelectorAll(".contractor-filter-dropdown-menu")
+              .forEach(function (menu) {
+                if (menu !== dropdownMenu) {
+                  menu.classList.remove("show");
+                }
+              });
+          }
+        }
+
+        // Define the list of options for each dropdown
+        let allwood_Products = [
+          "Allwood Italian PU Clear Gloss",
+          "Allwood Italian PU Clear Matt",
+          "Allwood Italian PU White Gloss",
+          "Allwood Italian PU White Matt",
+          "Allwood Thinners",
+        ];
+       
+
+        
+
+       
+
+        // Initialize each dropdown using the initializeDropdown function
+        initializeDropdown(
+          "id_paint_field_calculator-Button",
+          "id_type_of_paint",
+          "product-paint",
+          allwood_Products
+        );
+       
+      }
+      paintDrop();
 
 
 
   </script>
 
-  <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-    crossorigin="anonymous"></script> -->
+ 
 </body>
 
 </html>
