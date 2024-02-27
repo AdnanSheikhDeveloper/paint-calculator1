@@ -1747,6 +1747,7 @@
     <!-- swiper ============================= Card-->
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
+<<<<<<< HEAD
     <script>
       var swiper = new Swiper(".mySwiper", {
         effect: "coverflow",
@@ -1764,6 +1765,269 @@
         pagination: {
           el: ".swiper-pagination",
         },
+=======
+  <div class="mainboxpop" id="popup">
+    <div class="centerpopupbox">
+      <p class="mainhedingpopup">Add Furniture</p>
+
+      <div class="row popupimageline">
+        <div class="col" onclick="handleImgColor('img1hai')">
+          <img src="./Images/CupBoard1a.png" class="popupimg cubbimg" id="img1hai"
+            onclick="handleImageClick('doorlockbtn1')" />
+
+          <div class="kuchbhileloyr">
+            <div class="nameofproductpopup">
+              <span class="nameofproductpopup cubb">cupBoard</span>
+            </div>
+            <div class="popupnuttoncounter" id="doorlockbtn1">
+              <button class="popupbtnphasetwo" onclick="incrementbtn1('incre1')">+</button>
+              <span id="incre1">0</span>
+              <button class="popupbtnphasetwo" onclick="decrementbtn1('incre1')">-</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="col" onclick="handleImgColor('img2hai')">
+          <img src="./Images/table1a.png" class="popupimg" id="img2hai" onclick="handleImageClick('doorlockbtn2')" />
+          <div class="row btnandtext">
+            <div class="col kuchbhileloyr">
+              <div class="col nameofproductpopup">
+                <span class="nameofproductpopup">Table</span>
+              </div>
+              <div class="popupnuttoncounter bookshelfbtncnt" id="doorlockbtn2">
+                <button class="popupbtnphasetwo" onclick="incrementbtn2('incre2')">+</button>
+                <span id="incre2">0</span>
+                <button class="popupbtnphasetwo" onclick="decrementbtn2('incre2')">-</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col" onclick="handleImgColor('img3hai')">
+          <img src="./Images/Chair1a.png" class="popupimg" id="img3hai" onclick="handleImageClick('doorlockbtn3')" />
+          <div class="row btnandtext">
+            <div class="col kuchbhileloyr">
+              <div class="col nameofproductpopup">
+                <span class="nameofproductpopup">Chair</span>
+              </div>
+              <div class="popupnuttoncounter bookshelfbtncnt" id="doorlockbtn3">
+                <button class="popupbtnphasetwo" onclick="incrementbtn3('incre3')">+</button>
+                <span id="incre3">0</span>
+                <button class="popupbtnphasetwo" onclick="decrementbtn3('incre3')">-</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col" onclick="handleImgColor('img4hai')">
+          <img src="./Images/coucha.png" class="popupimg" id="img4hai" onclick="handleImageClick('doorlockbtn4')" />
+          <div class="row btnandtext">
+            <div class="col kuchbhileloyr">
+              <div class="col nameofproductpopup">
+                <span class="nameofproductpopup">couch</span>
+              </div>
+              <div class="popupnuttoncounter bookshelfbtncnt" id="doorlockbtn4">
+                <button class="popupbtnphasetwo" onclick="incrementbtn4('incre4')">+</button>
+                <span id="incre4">0</span>
+                <button class="popupbtnphasetwo" onclick="decrementbtn4('incre4')">-</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 2 row -->
+
+      <div class="row popupimageline">
+        <div class="col" onclick="handleImgColor('img5hai')">
+          <img src="./Images/Drawersa.png" class="popupimg" id="img5hai" onclick="handleImageClick('doorlockbtn5')" />
+          <div class="row btnandtext">
+            <div class="col kuchbhileloyr">
+              <div class="col nameofproductpopup">
+                <span class="nameofproductpopup">Drawers</span>
+              </div>
+              <div class="popupnuttoncounter bookshelfbtncnt" id="doorlockbtn5">
+                <button class="popupbtnphasetwo" onclick="incrementbtn5('incre5')">+</button>
+                <span id="incre5">0</span>
+                <button class="popupbtnphasetwo" onclick="decrementbtn5('incre5')">-</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col" onclick="handleImgColor('img6hai')">
+          <img src="./Images/BookShelfa.png" class="popupimg" id="img6hai" onclick="handleImageClick('doorlockbtn6')" />
+          <div class="row btnandtext">
+            <div class="col kuchbhileloyr">
+              <div class="col nameofproductpopup">
+                <span class="nameofproductpopup">Book shelf</span>
+              </div>
+              <div class="popupnuttoncounter bookshelfbtncnt" id="doorlockbtn6">
+                <button class="popupbtnphasetwo" onclick="incrementbtn6('incre6')">+</button>
+                <span id="incre6">0</span>
+                <button class="popupbtnphasetwo" onclick="decrementbtn6('incre6')">-</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col" onclick="handleImgColor('img7hai')">
+          <img src="./Images/Doora.png" class="popupimg" id="img7hai" onclick="handleImageClick('doorlockbtn7')" />
+          <div class="row btnandtext">
+            <div class="col kuchbhileloyr">
+              <div class="col nameofproductpopup">
+                <span class="nameofproductpopup">Door</span>
+              </div>
+              <div class="popupnuttoncounter bookshelfbtncnt" id="doorlockbtn7">
+                <button class="popupbtnphasetwo" onclick="incrementbtn7('incre7')">+</button>
+                <span id="incre7">0</span>
+                <button class="popupbtnphasetwo" onclick="decrementbtn7('incre7')">-</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col" onclick="handleImgColor('img8hai')">
+          <img src="./Images/bed1a.png" class="popupimg" id="img8hai"
+            onclick="handleImageClick('doorlockbtn8','kuchtohhai')" />
+          <div class="row btnandtext">
+            <div class="col kuchbhileloyr" id="kuchtohhai">
+              <div class="col nameofproductpopup">
+                <span class="nameofproductpopup">Bed</span>
+              </div>
+              <div class="popupnuttoncounter bookshelfbtncnt" id="doorlockbtn8">
+                <button class="popupbtnphasetwo" onclick="incrementbtn8('incre8')">+</button>
+                <span id="incre8">0</span>
+                <button class="popupbtnphasetwo" onclick="decrementbtn8('incre8')">-</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row twobtnwrapper">
+        <div class="col">
+          <button class="cancelbtnpopup" id="cancelBtn" onclick="cancel()">
+            cancel
+          </button>
+        </div>
+        <div class="col">
+          <button class="additombtnpopup" onclick="addButtonItom()">
+            add now
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- swiper ============================= Card-->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+  <script>
+    var swiper = new Swiper(".mySwiper", {
+      effect: "coverflow",
+      grabCursor: true,
+      centeredSlides: true,
+      slidesPerView: "auto",
+      coverflowEffect: {
+        rotate: 19,
+        stretch: 8,
+        depth: 150,
+        modifier: 1,
+        slideShadows: true,
+
+      },
+      pagination: {
+        el: ".swiper-pagination",
+      },
+    });
+
+
+    function ShowCal(title,destinationId) {
+      console.log(title);
+      var slideIndex = getSlideIndexByTitle(title);
+
+      swiper.slideTo(slideIndex);
+
+      const itemId = document.getElementById(destinationId);
+      if(itemId){
+        itemId.scrollIntoView({behavior:"smooth"});
+      }else {
+        console.error("Destination element not found:", destinationId);
+    }
+    }
+
+    function getSlideIndexByTitle(title) {
+      var slideTitles = document.querySelectorAll('.EstimatedFurniture');
+
+      for (let i = 0; i < slideTitles.length; i++) {
+        if (slideTitles[i].textContent === title) {
+          return i;
+        }
+      }
+
+      return 0;
+    }
+
+    // Popup MEnu===========================================
+    var popup = document.getElementById("popup");
+    popup.style.display = "none";
+    function togglePopup() {
+      popup.style.zIndex = "1";
+      if (popup.style.display === "none") {
+        popup.style.display = "block";
+      } else {
+        popup.style.display = "none";
+      }
+      function incrementbtn2() {
+        console.log("Increment");
+        if (cnt2 < 0) {
+          return false;
+        } else {
+          incre2.innerHTML = ++cnt2;
+        }
+      }
+
+      function decrementbtn2() {
+        console.log("Decrement");
+        if (cnt2 <= 0) {
+          return false;
+        } else {
+          incre2.innerHTML = --cnt2;
+        }
+      }
+    }
+    //
+    document.addEventListener("click", function (event) {
+      var popup = document.getElementById("popup");
+      var addFurnitureBtn = document.querySelector(".addFurniturebtn");
+
+      if (
+        event.target !== popup &&
+        !popup.contains(event.target) &&
+        event.target !== addFurnitureBtn
+      ) {
+        popup.style.display = "none";
+      }
+    });
+
+
+    var allImages = document.querySelectorAll('.popupimg');
+    let nameOfProduct = document.querySelectorAll('.nameofproductpopup');
+    let kuchbhileloyr = document.querySelectorAll('.kuchbhileloyr');
+
+    let incre1 = document.getElementById('incre1')
+    let incre2 = document.getElementById('incre2')
+    let incre3 = document.getElementById('incre3')
+    let incre4 = document.getElementById('incre4')
+    let incre5 = document.getElementById('incre5')
+    let incre6 = document.getElementById('incre6')
+    let incre7 = document.getElementById('incre7')
+    let incre8 = document.getElementById('incre8')
+
+    //for increment btn
+    function handleImageClick(buttonContainerID) {
+      let buttonContainer = document.getElementById(buttonContainerID);
+      // let imgID = document.getElementById(imgID);
+      allImages.forEach(function (image) {
+        image.classList.remove('active');
+>>>>>>> 29e5bac6caaa5dfc46327b9bb4a86a09d07d2c10
       });
 
       function ShowCal(title) {
@@ -2105,6 +2369,7 @@
           let keys = Object.keys(item);
           console.log(keys);
 
+<<<<<<< HEAD
           keys.forEach((key, ind) => {
             console.log(item);
             console.log(key);
@@ -2112,6 +2377,22 @@
             for (let i = 0; i < item[key]; i++) {
               listOfItems.innerHTML += `
           <a class="calc-select-btn" onclick="ShowCal('${key}')">
+=======
+      arr.forEach((item) => {
+        listOfItems.innerHTML = ""
+
+        let keys = Object.keys(item);
+        console.log(keys)
+
+        keys.forEach((key, ind) => {
+          console.log(item)
+          console.log(key)
+          console.log(item[key]);
+          const destinationId = `destination-${key}`
+          for (let i = 0; i < item[key]; i++) {
+            listOfItems.innerHTML += `
+          <a class="calc-select-btn" onclick="ShowCal('${key}','${destinationId}')">
+>>>>>>> 29e5bac6caaa5dfc46327b9bb4a86a09d07d2c10
             <span class="calc-btn-text calc-chairbtn">
               ${key}
             </span>
