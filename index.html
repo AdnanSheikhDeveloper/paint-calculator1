@@ -1,0 +1,2016 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>PaintCalculetor</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
+
+  <!-- swiper -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+</head>
+<style>
+  .PaintCalculetor {
+    width: 100%;
+    height: 80vh;
+    margin-top: 20px;
+  }
+
+  .paintbox {
+    height: 100%;
+  }
+
+  .lefthedingPain {
+    color: var(--Neutral-Neutral-700, #374151);
+    font-family: "Red Hat Display";
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+    /* 133.333% */
+    text-transform: capitalize;
+  }
+
+  .addFurniturebtn {
+    background: var(--Button-Gradient,
+        linear-gradient(90deg, #ac5821 0%, #e1722a 100%));
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    border: none;
+    border-radius: 18px;
+    margin-right: -14px;
+    padding: 4px 12px;
+    align-items: center;
+    width: 138px;
+    gap: 4px;
+    border: 1px solid var(--Button-Gradient, #ac5821);
+  }
+
+  .itomlistBtnCal {
+    border-radius: 8px;
+    border: 1px solid #b15812;
+    background: var(--Orange-0, #fffaf5);
+    width: px;
+    text-align: center;
+  }
+
+  .productitom {
+    text-decoration: none;
+    color: var(--Neutral-Neutral-700, #374151);
+
+    /* Body/12px: Regular */
+    font-family: "Red Hat Display";
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px;
+    /* 166.667% */
+  }
+
+  .calculetoeWrapper {
+    border-radius: 16px;
+    border: 1px solid #e5e7eb;
+    background: var(--Neutral-Neutral-0, #fff);
+    margin: 15px;
+    padding: 24px;
+  }
+
+
+
+  .placeholder-left {
+    outline: none;
+    border: none;
+    border-bottom: 1px solid #dcdcdc;
+    color: var(--Neutral-Neutral-300, #d1d5db);
+    font-family: "Red Hat Display";
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    width: 223px;
+    line-height: 24px;
+  }
+
+  .placeholder-left::placeholder {
+    color: var(--Neutral-Neutral-300, #d1d5db);
+
+  }
+
+  /* Chrome, Safari, Edge, Opera */
+  input::-webkit-outer-spin-button,
+  input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+
+  /* Firefox */
+  input[type=number] {
+    -moz-appearance: textfield;
+  }
+
+  .placeholder-right {
+    color: var(--Neutral-Neutral-300, #d1d5db);
+    font-family: "Red Hat Display";
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+    /* 171.429% */
+    margin-left: -26px;
+  }
+
+  .furniturehead {
+    margin-top: 20px;
+    color: var(--Neutral-Neutral-700, #374151);
+    font-family: "Red Hat Display";
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+    /* 171.429% */
+    text-transform: capitalize;
+  }
+
+  /* .selectBoxItomDrop{
+    margin-top: -34px;
+  } */
+  .textDropdown {
+    color: var(--Neutral-Neutral-700, #374151);
+    font-family: "Red Hat Display";
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+    /* 171.429% */
+    text-transform: capitalize;
+    padding-top: 20px;
+  }
+
+  /* dropdown ======================================*/
+  .paintselectDropdown {
+    color: #c0c0c0;
+    border: none;
+    border-bottom: 1px solid #dcdcdc;
+    outline: none;
+  }
+
+  /* end dropdown========================== */
+
+  /* ===============total amount ===========row */
+  .totalAmtCost {
+    border-radius: 16px;
+    border: 1px solid var(--Orange-100, #f7c48d);
+    background: var(--Neutral-Neutral-0, #fff);
+    margin: 16px;
+    margin-top: 8%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 16px;
+  }
+
+  .total-first,
+  .totalEstimetedsecondRow {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .textTotalPaint {
+    flex: 1;
+  }
+
+  .text-end {
+    text-align: end;
+  }
+
+  .textTotalPaint {
+    color: var(--Neutral-Neutral-700, #374151);
+    font-family: "Red Hat Display";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 22px;
+    /* 137.5% */
+  }
+
+  .AmountTotalPaint {
+    color: var(--Orange-300, #b96e1d);
+    font-family: "Red Hat Display";
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 26px;
+    /* 130% */
+  }
+
+  /* end box total amount=============================== */
+  /* calculetbtn and reset button */
+  .twobuttonContainer {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-left: 10px;
+    margin-top: 5%;
+  }
+
+  .calculetbtn {
+    border-radius: 4px;
+    background: var(--Button-Gradient,
+        linear-gradient(90deg, #ac5821 0%, #e1722a 100%));
+    outline: none;
+    border: none;
+    /* overflow: hidden; */
+    color: var(--Neutral-Neutral-0, #fff);
+    text-align: center;
+    /* text-overflow: ellipsis; */
+
+    /* CTA/12px: Medium */
+    font-family: "Red Hat Display";
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 20px;
+    /* 166.667% */
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    height: 30px;
+  }
+
+  .resetbtncalculetor {
+    border-radius: 4px;
+    border: 1px solid var(--Button-Gradient, #ac5821);
+    background: var(--Neutral-Neutral-0, #fff);
+    margin-left: 10px;
+    width: 20%;
+    height: 30px;
+    overflow: hidden;
+    text-align: center;
+    text-overflow: ellipsis;
+
+    /* CTA/12px: Medium */
+    font-family: "Red Hat Display";
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 20px;
+    /* 166.667% */
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    background: var(--Button-Gradient,
+        linear-gradient(90deg, #ac5821 0%, #e1722a 100%));
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  /* Adjustments for mobile screens */
+  .horizontal-scroll {
+    display: flex;
+    gap: 8px;
+    width: 98%;
+    overflow-x: auto;
+    margin-left: 11px;
+    align-items: center;
+    padding: 4px;
+    transition: overflow-x 0.3s ease-in-out;
+
+
+  }
+
+  .horizontal-scroll::-webkit-scrollbar {
+    width: 2px;
+    /* Width of the scrollbar */
+  }
+
+  @media (max-width: 767px) {
+    .horizontal-scroll {
+
+      width: 100%;
+      margin-left: 10px;
+      overflow-x: auto;
+      padding: 4px;
+      padding-left: 0px;
+
+    }
+
+    .input-container .col {
+      flex: 0 0 100%;
+      max-width: 200%;
+      margin-bottom: 10px;
+    }
+
+    .calculetoeWrapper {
+      margin: auto;
+      width: 90%;
+    }
+
+    .placeholder-left {
+      width: 100%;
+      margin-top: 10px;
+    }
+
+    .totalAmtCost {
+      margin: 0;
+      margin-top: 20px;
+    }
+
+
+    .calculetbtn {
+      width: 50%;
+      margin-left: -20px;
+    }
+
+    .resetbtncalculetor {
+      width: 50%;
+    }
+
+
+    .productitom {
+      min-width: 120px;
+      /* Set minimum width for each anchor tag */
+    }
+
+    .itomlistBtnCal {
+      width: 50%;
+    }
+
+    .WrapperRowTextDrop {
+      margin-top: 0px;
+    }
+
+    .selectBoxItomDrop {
+      margin-top: -32px;
+    }
+
+    .twobuttonContainer {
+      margin-top: 20px;
+      padding-bottom: 10px;
+    }
+
+    .row-total-first {
+      padding-right: 0 !important;
+    }
+    #doorlockbtn1.active,
+  #doorlockbtn8.active,
+  #doorlockbtn2.active,
+  #doorlockbtn7.active,
+  #doorlockbtn3.active,
+  #doorlockbtn6.active,
+  #doorlockbtn4.active,
+  #doorlockbtn5.active {
+    margin-right: -136px;
+    
+  }
+  }
+
+  /* card style here======================================== */
+  /* ========================================================= */
+  /* CARD====================================================== */
+
+  .Card-ui-box {
+    width: 100%;
+    height: 80vh;
+    /* border: 2px solid black; */
+    border-radius: 16px;
+    background: #fff;
+    box-shadow: 0px 0px 16px 0px rgba(0, 0, 0, 0.06);
+    padding: 10px;
+    margin: 15px 20px;
+  }
+
+  .swiper {
+    width: 100%;
+    height: 83vh;
+    padding-top: 22px;
+    padding-bottom: 50px;
+  }
+
+  .swiper-slide {
+    background-position: center;
+    background-size: cover;
+    width: 300px;
+    height: 300px;
+  }
+
+  .swiper-slide img {
+    display: block;
+    width: 100%;
+  }
+
+  /* card styling */
+  .card-title {
+    color: var(--Neutral-Neutral-900, #191b20);
+    font-family: "Red Hat Display";
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 28px;
+  }
+
+  .cardtotallabel {
+    color: var(--Neutral-Neutral-700, #374151);
+    font-family: "Red Hat Display";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 40px;
+    width: 164px;
+  }
+
+  .cardtotalft {
+    color: var(--Neutral-Neutral-700, #374151);
+    font-family: "Red Hat Display";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 41.5px;
+  }
+
+  .estimetedCostHeading {
+    text-align: center;
+    padding-bottom: 5px;
+  }
+
+  .estimetedNormalText {
+    color: var(--Brown-Primary, #966239);
+    font-family: "Red Hat Display";
+    font-size: 35px;
+    font-weight: 400;
+    line-height: 48px;
+  }
+
+  .esttimetedBoldText {
+    color: var(--Brown-Primary, #966239);
+    font-family: "Red Hat Display";
+    font-size: 35px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 48px;
+  }
+
+  .estimatedcostcard {
+    border: none;
+    background: #f3f4f6;
+    border-radius: 12px;
+    height: 150%;
+  }
+
+  .EstimatedFurniture {
+    color: var(--Neutral-Neutral-900, #191b20);
+    font-family: "Red Hat Display";
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 28px;
+    margin-top: -21px;
+  }
+
+  @media screen and (max-width: 768px) {
+    .Card-ui-box {
+      width: 90%;
+      /* Decrease width */
+      height: auto;
+      /* Auto height */
+      margin: 10px auto;
+      /* Center horizontally */
+    }
+
+    .swiper {
+      height: 30em;
+      /* Auto height */
+    }
+  }
+
+  /* card style end  ===============================================================*/
+  /* ============================================================================== */
+
+  /* ==============================POPUP MENU-======================================= */
+  /* ------------------------------------------------------------------------------------- */
+  .mainboxpop {
+    position: fixed;
+    /* margin: auto; */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+    max-width: 700px;
+    /* background: #E1722A; */
+    /* display: none; */
+  }
+
+  .centerpopupbox {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    border-radius: 10px;
+    background: #fff;
+    box-shadow: 0px 0px 16px 0px rgba(0, 0, 0, 0.06);
+    /* padding-top: 10px; */
+    padding: 20px;
+  }
+
+  .popupnuttoncounter {
+    border-radius: 5px;
+    border: 1px solid #e5e7eb;
+    background: #fff;
+    position: absolute;
+    /* display: inline-flex; */
+    display: flex;
+    align-items: center;
+    margin-left: 70px;
+    /* display: none; */
+  }
+
+  .popupbtnphasetwo {
+    color: #b8bbbf;
+    font-family: "Red Hat Display";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    text-transform: capitalize;
+    border: none;
+    background: transparent;
+  }
+
+  #img1hai,
+  #img2hai,
+  #img3hai,
+  #img4hai,
+  #img5hai,
+  #img6hai,
+  #img7hai,
+  #img8hai {
+    border: 1px solid #E5E7EB;
+    border-radius: 8px;
+    width: 100%;
+  }
+
+  #img1hai.active,
+  #img2hai.active,
+  #img3hai.active,
+  #img4hai.active,
+  #img5hai.active,
+  #img6hai.active,
+  #img7hai.active,
+  #img8hai.active {
+    border: 1.5px solid #04BD00;
+
+  }
+
+  /* .popupimg.active {
+    border: 1.5px solid #04BD00;
+
+  } */
+
+  .mainhedingpopup {
+    color: var(--Neutral-Neutral-700, #374151);
+    font-family: "Red Hat Display";
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 24px;
+    /* 133.333% */
+    text-transform: capitalize;
+  }
+
+  .nameofproductpopup {
+    color: #9CA4B1;
+    font-family: "Red Hat Display";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+
+    text-transform: capitalize;
+  }
+
+
+  .btnandtext {
+    margin-top: 10px;
+  }
+
+  .twobtnwrapper {
+    display: flex;
+    padding: 10px 30px;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+    /* flex: 1 0 0; */
+    width: 100%;
+    height: 70%;
+  }
+
+  .cancelbtnpopup {
+    width: 100%;
+    height: 40px;
+    border-radius: 4px;
+    border: 1px solid var(--Button-Gradient, #ac5821);
+    background: var(--Neutral-Neutral-0, #fff);
+    overflow: hidden;
+    text-align: center;
+    text-overflow: ellipsis;
+
+    font-family: "Red Hat Display";
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 20px;
+    /* 166.667% */
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #e1722a;
+  }
+
+  .additombtnpopup {
+    width: 100%;
+    height: 100%;
+    border-radius: 4px;
+    background: var(--Neutral-Neutral-0, #fff);
+    border: 1px solid var(--Button-Gradient, #ac5821);
+
+    overflow: hidden;
+    color: #e1722a;
+
+    text-align: center;
+    text-overflow: ellipsis;
+
+    /* CTA/12px: Medium */
+    font-family: "Red Hat Display";
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 20px;
+    /* 166.667% */
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    height: 40px;
+  }
+
+  /* .popupimageline{
+           gap:14px
+       }
+
+      .popupsecondlineimage{
+       gap: 14px;
+      } */
+  @media (max-width: 767px) {
+    .mainboxpop {
+      width: 80%;
+      background: transparent;
+    }
+
+    .centerpopupbox {
+      padding: 10px;
+    }
+
+    .popupimageline .col {
+      flex-basis: 50%;
+    }
+
+    .popupimg {
+      height: auto;
+      margin-top: 20px;
+    }
+
+    .popupnuttoncounter {
+      margin-left: 50px;
+    }
+
+    .calc-btn-text {
+      text-align: center;
+      width: 5em
+    }
+  }
+
+  @media (max-width: 450px) {
+    .horizontal-scroll {
+      width: 97%;
+
+    }
+
+  }
+
+  .calc-btn-text {
+    width: 5.5em;
+    text-align: center;
+  }
+
+  .calc-btn-text:hover {
+
+    text-align: center;
+    width: 50em;
+    transition: width 0.9 ease
+  }
+
+  .calc-select-btn {
+    border-radius: 8px;
+    border: 1px solid #B15812;
+    background: #FFFAF5;
+    display: inline-flex;
+    width: 70px;
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 400;
+    height: 31px;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    color: #374151;
+    transition: padding 0.3s ease-in-out, width 0.3s ease-in-out, color 0.3s ease-in-out;
+  }
+
+  .calc-select-btn:hover {
+    background: linear-gradient(90deg, #AC5821 0%, #E1722A 100%);
+    font-weight: 600;
+    color: #F9FAFB;
+    padding: 4px 16px;
+    width: 91px;
+    cursor: pointer;
+
+  }
+
+  /* .bookshelf {
+   display: flex;
+   justify-content: space-between;
+   align-items:center;
+} */
+  .bookshelfbtncnt {
+    margin-left: 90px;
+  }
+
+  .kuchbhileloyr {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+  }
+
+  .kuchbhileloyr.active {
+    align-items: flex-start;
+
+
+  }
+
+
+  /* ---------------------   - Section DropDown -------------------- */
+  .dropdown2 {
+    margin-bottom: 1rem;
+  }
+
+  .setText {
+    padding-left: 0.2rem !important;
+    padding-top: 0.8rem !important;
+    /* width: 100%; */
+  }
+
+  .fieldText {
+    margin-left: -2px !important;
+  }
+
+  .mainBox {
+    position: relative !important;
+    background: #fff;
+    z-index: 99;
+    top: 100%;
+    /* Position below the parent container */
+    left: 0;
+    /* Align with the left edge of the parent container */
+    width: 100%;
+    /* Occupy full width */
+  }
+
+  .box {
+    margin-top: 0.6rem;
+    border: 1px solid grey;
+    border-radius: 5px;
+    padding: -2px;
+    /* Note: Padding cannot be negative. */
+    position: absolute;
+    background-color: white;
+    width: 103% !important;
+    max-height: 200px !important;
+    overflow-y: auto;
+    display: none;
+  }
+
+  /* box ScrollBar width control */
+  .box::-webkit-scrollbar {
+    width: 3px !important;
+  }
+
+  .box::-webkit-scrollbar-thumb {
+    background-color: #9ca3af !important;
+  }
+
+  .selectField {
+    border: none;
+    border-bottom: 1px solid #ccc;
+    background-color: transparent;
+    width: 104%;
+    box-sizing: border-box;
+    display: flex;
+    color: var(--neutral-neutral-400, #9ca3af);
+    align-items: center;
+    font-family: "font-red-hat-regular";
+    justify-content: space-between;
+    cursor: pointer;
+    height: 2.4rem;
+  }
+
+  .list {
+    width: 100%;
+    background-color: #ffffff;
+    border-radius: 5px;
+    overflow: hidden;
+  }
+
+  .options {
+    display: flex;
+    padding: 8px 16px;
+    align-items: center;
+    gap: 8px;
+    align-self: stretch;
+    color: var(--neutral-neutral-500, #6b7280);
+    /* Body/14px: Medium */
+    font-family: Rad Hat Display;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 24px;
+    /* 171.429% */
+    width: 100%;
+    list-style: none;
+    cursor: pointer;
+    box-sizing: border-box;
+    background-color: #fff;
+    position: relative;
+    border-radius: 5px;
+  }
+
+  .options p {
+    margin: 0 !important;
+    margin-bottom: 0 !important;
+  }
+
+  .defaultText {
+    color: var(--neutral-neutral-400, #9ca3af);
+    /* Body/14px: Regular */
+    font-family: "font-red-hat-regular";
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+    /* 171.429% */
+    padding-left: 0.4rem;
+    padding-right: 0.3rem !important;
+    padding-top: -0.4rem !important;
+    /* Change the width as per your design */
+    white-space: nowrap;
+    /* Prevents text from wrapping to the next line */
+    overflow-x: hidden;
+  }
+
+  .selectText {
+    color: var(--orange-300, #b96e1d);
+    /* Body/14px: Medium */
+    font-family: "font-red-hat-medium";
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 24px;
+    /* 171.429% */
+    white-space: nowrap;
+    overflow-x: hidden;
+  }
+
+  .options:hover {
+    background: var(--brown-100, #f6ede5);
+    color: var(--brown-primary, #966239) !important;
+
+    /* Body/14px: Medium */
+    font-family: "font-red-hat-medium";
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 24px;
+    /* 171.429% */
+  }
+
+  .whoim {
+    overflow: hidden;
+    color: var(--Neutral-Neutral-700, #374151);
+    text-overflow: ellipsis;
+    font-family: "Red Hat Display";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    margin-left: -3px;
+    line-height: 24px;
+    /* 150% */
+  }
+
+  .cubbimg {
+    margin-bottom: 10px;
+
+  }
+
+  #doorlockbtn1,
+  #doorlockbtn8,
+  #doorlockbtn2,
+  #doorlockbtn7,
+  #doorlockbtn3,
+  #doorlockbtn6,
+  #doorlockbtn4,
+  #doorlockbtn5 {
+    display: none;
+  }
+
+  #doorlockbtn1.active,
+  #doorlockbtn8.active,
+  #doorlockbtn2.active,
+  #doorlockbtn7.active,
+  #doorlockbtn3.active,
+  #doorlockbtn6.active,
+  #doorlockbtn4.active,
+  #doorlockbtn5.active {
+    display: block;
+    margin-left: 79px;
+    text-align: left;
+  }
+</style>
+
+<body>
+  <section class="PaintCalculetor">
+    <div class="container paintbox">
+      <div class="row">
+        <div class="col-md-7 calculetoeWrapper">
+          <!-- first row -->
+          <div class="row mt-3">
+            <div class="col lefthedingPain">Paint Calculator</div>
+            <div class="col text-end">
+              <button class="addFurniturebtn" onclick="togglePopup()">
+                Add Furniture
+                <img src="./Images/+.png" />
+              </button>
+            </div>
+          </div>
+          <!-- first row end -->
+          <!-- 2nd row button -->
+          <div class="row mt-4">
+
+
+
+
+            <div class="calc-row-2 horizontal-scroll productbutton" id="listOfItems">
+              <!-- <a href="#" class="calc-select-btn cupbb">
+                <span class="calc-btn-text">Cupboards</span>
+              </a>
+              <a href="#" class="calc-select-btn ">
+                <span class="calc-btn-text">Table</span>
+              </a>
+              <a href="#" class="calc-select-btn ">
+                <span class="calc-btn-text calc-chairbtn">Chair 1</span>
+              </a> -->
+
+
+            </div>
+
+          </div>
+          <!-- end second row -->
+          <div class="row">
+            <!-- heading -->
+            <h5 class="furniturehead">Furniture Details</h5>
+          </div>
+
+          <!-- input lenth meter width -->
+          <div class="row input-container mt-4">
+            <div class="col">
+
+              <input type="number" placeholder="Length" class="placeholder-left" id="length1" />
+              <span class="placeholder-right">mtr</span>
+            </div>
+            <div class="col">
+              <input type="number" placeholder="Length" class="placeholder-left" id="length2" />
+              <span class="placeholder-right">mtr</span>
+            </div>
+            <div class="col">
+              <input type="number" placeholder="Length" class="placeholder-left" id="length3" />
+              <span class="placeholder-right">mtr</span>
+            </div>
+          </div>
+          <!-- end input with length -->
+          <div class="row">
+            <div class="row WrapperRowTextDrop">
+              <p class="textDropdown">
+                Select the Products you want to apply
+              </p>
+            </div>
+            <!-- dropdown -->
+            <div class="row p-3 selectBoxItomDrop">
+              <!-- desktop dropdown============================ -->
+              <div class="fill-listlabel">
+                <div>
+                  <div class="selectField fieldText" id="form3rest" onclick="toggleDropdown()">
+                    <span class="defaultText setText whoim" id="myBackground" tabindex="0"
+                      style="color: #374151;">Allwood Italian PU Clear Gloss</span>
+                    <img class="grayarrow arrow-toggel" src="./Images/iconamoon_arrow-up-2-light.png" alt="" />
+                  </div>
+                  <div class="mainBox">
+                    <ul class="hide box box3 showListOptions">
+                      <li class="options" tabindex="0" data-target="#btn3">
+                        <p>Allwood Italian PU Clear Gloss</p>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <!-- end dropdown  -->
+
+            </div>
+            <!-- dropdownend -->
+          </div>
+
+          <div class="totalAmtCost">
+            <div class="total-first">
+              <div class="textTotalPaint">Total Estimated Paint:</div>
+              <div class="AmountTotalPaint">30 L - 40L</div>
+            </div>
+            <div class="totalEstimetedsecondRow">
+              <div class="textTotalPaint">Total Estimated Cost:</div>
+              <div class="text-end AmountTotalPaint">
+                <span>₹3,000</span>
+                <span>-</span>
+                <span>₹5,000</span>
+              </div>
+            </div>
+          </div>
+          <div class="row twobuttonContainer">
+            <div class="calculateBtnContainer">
+              <button class="calculetbtn" onclick="dbs()">calculate now</button>
+              <button class="resetbtncalculetor">reset</button>
+            </div>
+            <!-- <div class="resetBtnContainer"><button class="resetbtncalculetor">reset</button></div> -->
+          </div>
+        </div>
+
+        <!-- card section ===============================================================-->
+        <!-- =========================================================================== -->
+        <div class="col-md-4">
+          <div class="Card-ui-box">
+            <div class="row">
+              <div class="estimetedCostHeading">
+                <span class="estimetedNormalText">Estimated</span>
+                <span class="esttimetedBoldText">Cost</span>
+              </div>
+            </div>
+            <div class="swiper mySwiper" id="mySwipersId">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <div class="card estimatedcostcard" style="width: 18rem">
+                    <img src="./Images/image 5.png" class="card-img-top p-3" alt="..." />
+                    <div class="card-body">
+                      <h5 class="card-title EstimatedFurniture">Cupboard</h5>
+                      <div class="row">
+                        <div class="col">
+                          <p class="card-text cardtotallabel">
+                            Total area to be painted
+                          </p>
+                        </div>
+                        <div class="col">
+                          <p class="card-text cardtotalft">1569 sq.ft</p>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col">
+                          <p class="card-text cardtotallabel">Paint Usage:</p>
+                        </div>
+                        <div class="col">
+                          <p class="card-text cardtotalft">21 L</p>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col">
+                          <p class="card-text cardtotallabel">
+                            Allwood Paint cost:
+                          </p>
+                        </div>
+                        <div class="col">
+                          <p class="card-text cardtotalft">₹3000</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="card estimatedcostcard" style="width: 18rem">
+                    <img src="./Images/image 5.png" class="card-img-top p-3" alt="..." />
+                    <div class="card-body">
+                      <h5 class="card-title EstimatedFurniture">Table</h5>
+                      <div class="row">
+                        <div class="col">
+                          <p class="card-text cardtotallabel">
+                            Total area to be painted
+                          </p>
+                        </div>
+                        <div class="col">
+                          <p class="card-text cardtotalft">1569 sq.ft</p>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col">
+                          <p class="card-text cardtotallabel">Paint Usage:</p>
+                        </div>
+                        <div class="col">
+                          <p class="card-text cardtotalft">21 L</p>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col">
+                          <p class="card-text cardtotallabel">
+                            Allwood Paint cost:
+                          </p>
+                        </div>
+                        <div class="col">
+                          <p class="card-text cardtotalft">₹3000</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="card estimatedcostcard" style="width: 18rem">
+                    <img src="./Images/image 5.png" class="card-img-top p-3" alt="..." />
+                    <div class="card-body">
+                      <h5 class="card-title EstimatedFurniture">Chair</h5>
+                      <div class="row">
+                        <div class="col">
+                          <p class="card-text cardtotallabel">
+                            Total area to be painted
+                          </p>
+                        </div>
+                        <div class="col">
+                          <p class="card-text cardtotalft">1569 sq.ft</p>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col">
+                          <p class="card-text cardtotallabel">Paint Usage:</p>
+                        </div>
+                        <div class="col">
+                          <p class="card-text cardtotalft">21 L</p>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col">
+                          <p class="card-text cardtotallabel">
+                            Allwood Paint cost:
+                          </p>
+                        </div>
+                        <div class="col">
+                          <p class="card-text cardtotalft">₹3000</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="card estimatedcostcard" style="width: 18rem">
+                    <img src="./Images/image 5.png" class="card-img-top p-3" alt="..." />
+                    <div class="card-body">
+                      <h5 class="card-title EstimatedFurniture">Couch</h5>
+                      <div class="row">
+                        <div class="col">
+                          <p class="card-text cardtotallabel">
+                            Total area to be painted
+                          </p>
+                        </div>
+                        <div class="col">
+                          <p class="card-text cardtotalft">1569 sq.ft</p>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col">
+                          <p class="card-text cardtotallabel">Paint Usage:</p>
+                        </div>
+                        <div class="col">
+                          <p class="card-text cardtotalft">21 L</p>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col">
+                          <p class="card-text cardtotallabel">
+                            Allwood Paint cost:
+                          </p>
+                        </div>
+                        <div class="col">
+                          <p class="card-text cardtotalft">₹3000</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="card estimatedcostcard" style="width: 18rem">
+                    <img src="./Images/image 5.png" class="card-img-top p-3" alt="..." />
+                    <div class="card-body">
+                      <h5 class="card-title EstimatedFurniture">Drawers</h5>
+                      <div class="row">
+                        <div class="col">
+                          <p class="card-text cardtotallabel">
+                            Total area to be painted
+                          </p>
+                        </div>
+                        <div class="col">
+                          <p class="card-text cardtotalft">1569 sq.ft</p>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col">
+                          <p class="card-text cardtotallabel">Paint Usage:</p>
+                        </div>
+                        <div class="col">
+                          <p class="card-text cardtotalft">21 L</p>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col">
+                          <p class="card-text cardtotallabel">
+                            Allwood Paint cost:
+                          </p>
+                        </div>
+                        <div class="col">
+                          <p class="card-text cardtotalft">₹3000</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="card estimatedcostcard" style="width: 18rem">
+                    <img src="./Images/image 5.png" class="card-img-top p-3" alt="..." />
+                    <div class="card-body">
+                      <h5 class="card-title EstimatedFurniture">BookShelf</h5>
+                      <div class="row">
+                        <div class="col">
+                          <p class="card-text cardtotallabel">
+                            Total area to be painted
+                          </p>
+                        </div>
+                        <div class="col">
+                          <p class="card-text cardtotalft">1569 sq.ft</p>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col">
+                          <p class="card-text cardtotallabel">Paint Usage:</p>
+                        </div>
+                        <div class="col">
+                          <p class="card-text cardtotalft">21 L</p>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col">
+                          <p class="card-text cardtotallabel">
+                            Allwood Paint cost:
+                          </p>
+                        </div>
+                        <div class="col">
+                          <p class="card-text cardtotalft">₹3000</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="card estimatedcostcard" style="width: 18rem">
+                    <img src="./Images/image 5.png" class="card-img-top p-3" alt="..." />
+                    <div class="card-body">
+                      <h5 class="card-title EstimatedFurniture">Door</h5>
+                      <div class="row">
+                        <div class="col">
+                          <p class="card-text cardtotallabel">
+                            Total area to be painted
+                          </p>
+                        </div>
+                        <div class="col">
+                          <p class="card-text cardtotalft">1569 sq.ft</p>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col">
+                          <p class="card-text cardtotallabel">Paint Usage:</p>
+                        </div>
+                        <div class="col">
+                          <p class="card-text cardtotalft">21 L</p>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col">
+                          <p class="card-text cardtotallabel">
+                            Allwood Paint cost:
+                          </p>
+                        </div>
+                        <div class="col">
+                          <p class="card-text cardtotalft">₹3000</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="card estimatedcostcard" style="width: 18rem">
+                    <img src="./Images/image 5.png" class="card-img-top p-3" alt="..." />
+                    <div class="card-body">
+                      <h5 class="card-title EstimatedFurniture">Bed</h5>
+                      <div class="row">
+                        <div class="col">
+                          <p class="card-text cardtotallabel">
+                            Total area to be painted
+                          </p>
+                        </div>
+                        <div class="col">
+                          <p class="card-text cardtotalft">1569 sq.ft</p>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col">
+                          <p class="card-text cardtotallabel">Paint Usage:</p>
+                        </div>
+                        <div class="col">
+                          <p class="card-text cardtotalft">21 L</p>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col">
+                          <p class="card-text cardtotallabel">
+                            Allwood Paint cost:
+                          </p>
+                        </div>
+                        <div class="col">
+                          <p class="card-text cardtotalft">₹3000</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- POPUPU=================================================================== -->
+
+  <div class="mainboxpop" id="popup">
+    <div class="centerpopupbox">
+      <p class="mainhedingpopup">Add Furniture</p>
+
+      <div class="row popupimageline">
+        <div class="col" onclick="handleImgColor('img1hai')">
+          <img src="./Images/CupBoard1a.png" class="popupimg cubbimg" id="img1hai"
+            onclick="handleImageClick('doorlockbtn1')" />
+
+          <div class="kuchbhileloyr">
+            <div class="nameofproductpopup">
+              <span class="nameofproductpopup cubb">cupBoard</span>
+            </div>
+            <div class="popupnuttoncounter" id="doorlockbtn1">
+              <button class="popupbtnphasetwo" onclick="incrementbtn1('incre1')">+</button>
+              <span id="incre1">0</span>
+              <button class="popupbtnphasetwo" onclick="decrementbtn1('incre1')">-</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="col" onclick="handleImgColor('img2hai')">
+          <img src="./Images/table1a.png" class="popupimg" id="img2hai" onclick="handleImageClick('doorlockbtn2')" />
+          <div class="row btnandtext">
+            <div class="col kuchbhileloyr">
+              <div class="col nameofproductpopup">
+                <span class="nameofproductpopup">Table</span>
+              </div>
+              <div class="popupnuttoncounter bookshelfbtncnt" id="doorlockbtn2">
+                <button class="popupbtnphasetwo" onclick="incrementbtn2('incre2')">+</button>
+                <span id="incre2">0</span>
+                <button class="popupbtnphasetwo" onclick="decrementbtn2('incre2')">-</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col" onclick="handleImgColor('img3hai')">
+          <img src="./Images/Chair1a.png" class="popupimg" id="img3hai" onclick="handleImageClick('doorlockbtn3')" />
+          <div class="row btnandtext">
+            <div class="col kuchbhileloyr">
+              <div class="col nameofproductpopup">
+                <span class="nameofproductpopup">Chair</span>
+              </div>
+              <div class="popupnuttoncounter bookshelfbtncnt" id="doorlockbtn3">
+                <button class="popupbtnphasetwo" onclick="incrementbtn3('incre3')">+</button>
+                <span id="incre3">0</span>
+                <button class="popupbtnphasetwo" onclick="decrementbtn3('incre3')">-</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col" onclick="handleImgColor('img4hai')">
+          <img src="./Images/coucha.png" class="popupimg" id="img4hai" onclick="handleImageClick('doorlockbtn4')" />
+          <div class="row btnandtext">
+            <div class="col kuchbhileloyr">
+              <div class="col nameofproductpopup">
+                <span class="nameofproductpopup">couch</span>
+              </div>
+              <div class="popupnuttoncounter bookshelfbtncnt" id="doorlockbtn4">
+                <button class="popupbtnphasetwo" onclick="incrementbtn4('incre4')">+</button>
+                <span id="incre4">0</span>
+                <button class="popupbtnphasetwo" onclick="decrementbtn4('incre4')">-</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 2 row -->
+
+      <div class="row popupimageline">
+        <div class="col" onclick="handleImgColor('img5hai')">
+          <img src="./Images/Drawersa.png" class="popupimg" id="img5hai" onclick="handleImageClick('doorlockbtn5')" />
+          <div class="row btnandtext">
+            <div class="col kuchbhileloyr">
+              <div class="col nameofproductpopup">
+                <span class="nameofproductpopup">Drawers</span>
+              </div>
+              <div class="popupnuttoncounter bookshelfbtncnt" id="doorlockbtn5">
+                <button class="popupbtnphasetwo" onclick="incrementbtn5('incre5')">+</button>
+                <span id="incre5">0</span>
+                <button class="popupbtnphasetwo" onclick="decrementbtn5('incre5')">-</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col" onclick="handleImgColor('img6hai')">
+          <img src="./Images/BookShelfa.png" class="popupimg" id="img6hai" onclick="handleImageClick('doorlockbtn6')" />
+          <div class="row btnandtext">
+            <div class="col kuchbhileloyr">
+              <div class="col nameofproductpopup">
+                <span class="nameofproductpopup">Book shelf</span>
+              </div>
+              <div class="popupnuttoncounter bookshelfbtncnt" id="doorlockbtn6">
+                <button class="popupbtnphasetwo" onclick="incrementbtn6('incre6')">+</button>
+                <span id="incre6">0</span>
+                <button class="popupbtnphasetwo" onclick="decrementbtn6('incre6')">-</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col" onclick="handleImgColor('img7hai')">
+          <img src="./Images/Doora.png" class="popupimg" id="img7hai" onclick="handleImageClick('doorlockbtn7')" />
+          <div class="row btnandtext">
+            <div class="col kuchbhileloyr">
+              <div class="col nameofproductpopup">
+                <span class="nameofproductpopup">Door</span>
+              </div>
+              <div class="popupnuttoncounter bookshelfbtncnt" id="doorlockbtn7">
+                <button class="popupbtnphasetwo" onclick="incrementbtn7('incre7')">+</button>
+                <span id="incre7">0</span>
+                <button class="popupbtnphasetwo" onclick="decrementbtn7('incre7')">-</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col" onclick="handleImgColor('img8hai')">
+          <img src="./Images/bed1a.png" class="popupimg" id="img8hai"
+            onclick="handleImageClick('doorlockbtn8','kuchtohhai')" />
+          <div class="row btnandtext">
+            <div class="col kuchbhileloyr" id="kuchtohhai">
+              <div class="col nameofproductpopup">
+                <span class="nameofproductpopup">Bed</span>
+              </div>
+              <div class="popupnuttoncounter bookshelfbtncnt" id="doorlockbtn8">
+                <button class="popupbtnphasetwo" onclick="incrementbtn8('incre8')">+</button>
+                <span id="incre8">0</span>
+                <button class="popupbtnphasetwo" onclick="decrementbtn8('incre8')">-</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row twobtnwrapper">
+        <div class="col">
+          <button class="cancelbtnpopup" id="cancelBtn" onclick="cancel()">
+            cancel
+          </button>
+        </div>
+        <div class="col">
+          <button class="additombtnpopup" onclick="addButtonItom()">
+            add now
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- swiper ============================= Card-->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+  <script>
+    var swiper = new Swiper(".mySwiper", {
+      effect: "coverflow",
+      grabCursor: true,
+      centeredSlides: true,
+      slidesPerView: "auto",
+      coverflowEffect: {
+        rotate: 19,
+        stretch: 8,
+        depth: 150,
+        modifier: 1,
+        slideShadows: true,
+
+      },
+      pagination: {
+        el: ".swiper-pagination",
+      },
+    });
+
+
+    function ShowCal(title) {
+      console.log(title);
+      var slideIndex = getSlideIndexByTitle(title);
+
+      swiper.slideTo(slideIndex);
+    }
+
+    function getSlideIndexByTitle(title) {
+      var slideTitles = document.querySelectorAll('.EstimatedFurniture');
+
+      for (let i = 0; i < slideTitles.length; i++) {
+        if (slideTitles[i].textContent === title) {
+          return i;
+        }
+      }
+
+      return 0; 
+    }
+
+    // Popup MEnu===========================================
+    var popup = document.getElementById("popup");
+    popup.style.display = "none";
+    function togglePopup() {
+      popup.style.zIndex = "1";
+      if (popup.style.display === "none") {
+        popup.style.display = "block";
+      } else {
+        popup.style.display = "none";
+      }
+      function incrementbtn2() {
+        console.log("Increment");
+        if (cnt2 < 0) {
+          return false;
+        } else {
+          incre2.innerHTML = ++cnt2;
+        }
+      }
+
+      function decrementbtn2() {
+        console.log("Decrement");
+        if (cnt2 <= 0) {
+          return false;
+        } else {
+          incre2.innerHTML = --cnt2;
+        }
+      }
+    }
+    //
+    document.addEventListener("click", function (event) {
+      var popup = document.getElementById("popup");
+      var addFurnitureBtn = document.querySelector(".addFurniturebtn");
+
+      if (
+        event.target !== popup &&
+        !popup.contains(event.target) &&
+        event.target !== addFurnitureBtn
+      ) {
+        popup.style.display = "none";
+      }
+    });
+
+
+    var allImages = document.querySelectorAll('.popupimg');
+    let nameOfProduct = document.querySelectorAll('.nameofproductpopup');
+    let kuchbhileloyr = document.querySelectorAll('.kuchbhileloyr');
+
+    let incre1 = document.getElementById('incre1')
+    let incre2 = document.getElementById('incre2')
+    let incre3 = document.getElementById('incre3')
+    let incre4 = document.getElementById('incre4')
+    let incre5 = document.getElementById('incre5')
+    let incre6 = document.getElementById('incre6')
+    let incre7 = document.getElementById('incre7')
+    let incre8 = document.getElementById('incre8')
+
+    //for increment btn
+    function handleImageClick(buttonContainerID) {
+      let buttonContainer = document.getElementById(buttonContainerID);
+      // let imgID = document.getElementById(imgID);
+      allImages.forEach(function (image) {
+        image.classList.remove('active');
+      });
+      buttonContainer.classList.add('active');
+      // setTimeout(()=>{
+      //   buttonContainer.classList.remove('active');
+
+      // },2000)
+    }
+
+    // for color effect
+    function handleImgColor(imgId) {
+      let ImgID = document.getElementById(imgId);
+
+      allImages.forEach(function (image) {
+        // image.classList.remove('active');
+      })
+      ImgID.classList.add('active');
+
+      
+      // setTimeout(()=>{
+
+      //   ImgID.classList.remove('active');
+      // },2000)
+    }
+
+
+
+
+    // cancelbtn hide popup
+    let cancelBtn = document.getElementById("cancelBtn");
+    function cancel() {
+      popup.style.display = "none";
+    }
+
+    // ===========Add Itom==============================
+
+
+    // increment select itom
+
+    // desktop dropdown
+    function toggleDropdown() {
+      //  Get the dropdown element
+      const dropdown = document.querySelector(".box");
+
+      //  Toggle the display of the dropdown
+      if (dropdown.style.display === "block") {
+        dropdown.style.display = "none";
+      } else {
+        dropdown.style.display = "block";
+      }
+    }
+
+    let cnt = 0;
+    let cnt2 = 0;
+    let cnt3 = 0;
+    let cnt4 = 0;
+    let cnt5 = 0;
+    let cnt6 = 0;
+    let cnt7 = 0;
+    let cnt8 = 0;
+    let obj = {
+
+    }
+
+    function incrementbtn1() {
+      // console.log("Increment");
+      if (cnt < 0) {
+        return false;
+      } else {
+        incre1.innerHTML = ++cnt;
+
+        obj.CupBoard = incre1.innerHTML;
+        // console.log(obj)
+      }
+    }
+
+
+    function decrementbtn1() {
+      // console.log("Decrement");
+      if (cnt <= 0) {
+        return false;
+      } else {
+        incre1.innerHTML = --cnt;
+        obj.CupBoard = incre1.innerHTML;
+        // console.log(obj)
+      }
+    }
+    function incrementbtn2() {
+      // console.log("Increment");
+      if (cnt2 < 0) {
+        return false;
+      } else {
+        incre2.innerHTML = ++cnt2;
+        obj.Table = incre2.innerHTML
+        // console.log(obj)
+      }
+    }
+
+    function decrementbtn2() {
+      // console.log("Decrement");
+      if (cnt2 <= 0) {
+        return false;
+      } else {
+        incre2.innerHTML = --cnt2;
+        obj.Table = incre2.innerHTML
+        // console.log(obj)
+      }
+    }
+    function incrementbtn3() {
+      // console.log("Increment");
+      if (cnt3 < 0) {
+        return false;
+      } else {
+        incre3.innerHTML = ++cnt3;
+        obj.Chair = incre3.innerHTML
+        // console.log(obj)
+      }
+    }
+
+    function decrementbtn3() {
+      // console.log("Decrement");
+      if (cnt3 <= 0) {
+        return false;
+      } else {
+        incre3.innerHTML = --cnt3;
+        obj.Chair = incre3.innerHTML
+        // console.log(obj)
+      }
+    }
+    function incrementbtn4() {
+      // console.log("Increment");
+      if (cnt4 < 0) {
+        return false;
+      } else {
+        incre4.innerHTML = ++cnt4;
+        obj.Couch = incre4.innerHTML
+        // console.log(obj)
+      }
+    }
+
+    function decrementbtn4() {
+      // console.log("Decrement");
+      if (cnt4 <= 0) {
+        return false;
+      } else {
+        incre4.innerHTML = --cnt4;
+        obj.Couch = incre4.innerHTML
+        // console.log(obj)
+      }
+    }
+    function incrementbtn5() {
+      // console.log("Increment");
+      if (cnt5 < 0) {
+        return false;
+      } else {
+        incre5.innerHTML = ++cnt5;
+        obj.Drawers = incre5.innerHTML
+        // console.log(obj)
+      }
+    }
+
+    function decrementbtn5() {
+      // console.log("Decrement");
+      if (cnt5 <= 0) {
+        return false;
+      } else {
+        incre5.innerHTML = --cnt5;
+        obj.Drawers = incre5.innerHTML
+        // console.log(obj)
+      }
+    }
+    function incrementbtn6() {
+      // console.log("Increment");
+      if (cnt6 < 0) {
+        return false;
+      } else {
+        incre6.innerHTML = ++cnt6;
+        obj.BookShelf = incre6.innerHTML
+        // console.log(obj)
+      }
+    }
+
+    function decrementbtn6() {
+      // console.log("Decrement");
+      if (cnt6 <= 0) {
+        return false;
+      } else {
+        incre6.innerHTML = --cnt6;
+        obj.BookShelf = incre6.innerHTML
+        // console.log(obj)
+      }
+    }
+    function incrementbtn7() {
+      // console.log("Increment");
+      if (cnt7 < 0) {
+        return false;
+      } else {
+        incre7.innerHTML = ++cnt7;
+        obj.Door = incre7.innerHTML
+        // console.log(obj)
+      }
+    }
+
+    function decrementbtn7() {
+      // console.log("Decrement");
+      if (cnt7 <= 0) {
+        return false;
+      } else {
+        incre7.innerHTML = --cnt7;
+        obj.Door = incre7.innerHTML
+        // console.log(obj)
+      }
+    }
+    function incrementbtn8() {
+      // console.log("Increment");
+      if (cnt8 < 0) {
+        return false;
+      } else {
+        incre8.innerHTML = ++cnt8;
+        obj.Bed = incre8.innerHTML
+        // console.log(obj)
+      }
+    }
+
+    function decrementbtn8() {
+      // console.log("Decrement");
+      if (cnt8 <= 0) {
+        return false;
+      } else {
+        incre8.innerHTML = --cnt8;
+        obj.Bed = incre8.innerHTML
+        // console.log(obj)
+      }
+    }
+
+    //  <a href="#" class="calc-select-btn">
+    // <span class="calc-btn-text calc-chairbtn">Chair 1</span>
+    //     </a>
+
+    // console.log(obj)
+    let listOfItems = document.getElementById('listOfItems');
+    let arr = [];
+    function addButtonItom() {
+      incrementbtn1();
+      decrementbtn1();
+      incrementbtn2();
+      decrementbtn2();
+      incrementbtn3();
+      decrementbtn3();
+      incrementbtn4();
+      decrementbtn4();
+      incrementbtn5();
+      decrementbtn5();
+      incrementbtn6();
+      decrementbtn6();
+      incrementbtn7();
+      decrementbtn7();
+      incrementbtn8();
+      decrementbtn8();
+      arr.push(obj);
+      console.log(arr);
+
+
+      arr.forEach((item) => {
+        listOfItems.innerHTML = ""
+
+        let keys = Object.keys(item);
+        console.log(keys)
+
+        keys.forEach((key, ind) => {
+          console.log(item)
+          console.log(key)
+          console.log(item[key]);
+          for (let i = 0; i < item[key]; i++) {
+            listOfItems.innerHTML += `
+          <a class="calc-select-btn" onclick="ShowCal('${key}')">
+            <span class="calc-btn-text calc-chairbtn">
+              ${key}
+            </span>
+          </a>`;
+          }
+        })
+      })
+
+
+      incre1.innerHTML = 0
+      incre2.innerHTML = 0
+      incre3.innerHTML = 0
+      incre4.innerHTML = 0
+      incre5.innerHTML = 0
+      incre6.innerHTML = 0
+      incre7.innerHTML = 0
+      incre8.innerHTML = 0
+      
+
+        popup.style.display = "none";
+
+      // const objKeys = arr.map((obj1,ind)=>Object.keys(obj1)[ind]);
+      // console.log(objKeys);
+
+      // arr.forEach((item, ind) => {
+      // console.log(item);
+      // let Keys = Object.keys(item);
+      // console.log(Keys);
+      // for (let i = 0; i < item.CupBoard; i++) {
+      //   listOfItems.innerHTML += `
+      //       <a class="calc-select-btn"><span class="calc-btn-text calc-chairbtn">
+      //         ${Keys[1]}
+      //       </span>
+      // </a>`
+      // }
+      // for (let i = 0; i < item.Table; i++) {
+      //   listOfItems.innerHTML += `
+      //       <a class="calc-select-btn"><span class="calc-btn-text calc-chairbtn">
+      //         ${Keys[2]}
+
+      //       </span>
+      // </a>`
+      // }
+      // for (let i = 0; i < item.Chair; i++) {
+      //   listOfItems.innerHTML += `
+      //       <a class="calc-select-btn"><span class="calc-btn-text calc-chairbtn">
+      //         ${Keys[0]}
+
+      //       </span>
+      // </a>`
+      // }
+      // for (let i = 0; i < item.Couch; i++) {
+      //   listOfItems.innerHTML += `
+      //       <a class="calc-select-btn"><span class="calc-btn-text calc-chairbtn">
+      //         ${Keys[3]}
+
+      //       </span>
+      // </a>`
+      // }
+      // for (let i = 0; i < item.Drawers; i++) {
+      //   listOfItems.innerHTML += `
+      //       <a class="calc-select-btn"><span class="calc-btn-text calc-chairbtn">
+      //         ${Keys[4]}
+
+      //       </span>
+      // </a>`
+      // }
+      // for (let i = 0; i < item.BookShelf; i++) {
+      //   listOfItems.innerHTML += `
+      //       <a class="calc-select-btn"><span class="calc-btn-text calc-chairbtn">
+      //         ${Keys[5]}
+
+      //       </span>
+      // </a>`
+      // }
+      // for (let i = 0; i < item.Door; i++) {
+      //   listOfItems.innerHTML += `
+      //       <a class="calc-select-btn"><span class="calc-btn-text calc-chairbtn">
+      //         ${Keys[6]}
+
+      //       </span>
+      // </a>`
+      // }
+      // for (let i = 0; i < item.Bed; i++) {
+      //   listOfItems.innerHTML += `
+      //       <a class="calc-select-btn"><span class="calc-btn-text calc-chairbtn">
+      //         ${Keys[7]}
+
+      //       </span>
+      // </a>`
+      // }
+
+
+
+
+      // })
+
+    }
+    let length1 = document.getElementById('length1')
+    let length2 = document.getElementById('length2')
+    let length3 = document.getElementById('length3')
+    function dbs() {
+
+      console.log(length1.value, length2.value, length3.value)
+    }
+
+
+
+
+
+  </script>
+
+  <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script> -->
+</body>
+
+</html>
