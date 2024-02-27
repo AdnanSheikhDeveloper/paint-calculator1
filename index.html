@@ -394,6 +394,156 @@
     /* ========================================================= */
     /* CARD====================================================== */
 
+<<<<<<< HEAD
+=======
+    .twobuttonContainer {
+      margin-top: 20px;
+      padding-bottom: 10px;
+    }
+
+    .row-total-first {
+      padding-right: 0 !important;
+    }
+
+    #doorlockbtn1.active,
+    #doorlockbtn8.active,
+    #doorlockbtn2.active,
+    #doorlockbtn7.active,
+    #doorlockbtn3.active,
+    #doorlockbtn6.active,
+    #doorlockbtn4.active,
+    #doorlockbtn5.active {
+      margin-right: -136px;
+
+    }
+  }
+
+  /* @media (max-width: 1440px) {
+    .totalAmtCost {
+    width: 45em;
+    border-radius: 16px;
+    border: 1px solid var(--Orange-100, #f7c48d);
+    background: var(--Neutral-Neutral-0, #fff);
+    margin-top: 8%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 16px;}
+  } */
+
+
+  /* card style here======================================== */
+  /* ========================================================= */
+  /* CARD====================================================== */
+
+  .Card-ui-box {
+    width: 100%;
+    height: 80vh;
+    /* border: 2px solid black; */
+    border-radius: 16px;
+    background: #fff;
+    box-shadow: 0px 0px 16px 0px rgba(0, 0, 0, 0.06);
+    padding: 10px;
+    margin: 15px 20px;
+  }
+
+  .swiper {
+    width: 100%;
+    height: 83vh;
+    padding-top: 22px;
+    padding-bottom: 50px;
+  }
+
+  .swiper-slide {
+    background-position: center;
+    background-size: cover;
+    width: 300px;
+    height: 300px;
+  }
+
+  .swiper-slide img {
+    display: block;
+    width: 100%;
+  }
+
+  /* card styling */
+  .card-title {
+    color: var(--Neutral-Neutral-900, #191b20);
+    font-family: "Red Hat Display";
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 28px;
+  }
+
+  .cardtotallabel {
+    color: var(--Neutral-Neutral-700, #374151);
+    font-family: "Red Hat Display";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 40px;
+    width: 164px;
+  }
+
+  .cardtotalft {
+    color: var(--Neutral-Neutral-700, #374151);
+    font-family: "Red Hat Display";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 41.5px;
+  }
+
+  .estimetedCostHeading {
+    text-align: center;
+    padding-bottom: 5px;
+  }
+
+  .estimetedNormalText {
+    color: var(--Brown-Primary, #966239);
+    font-family: "Red Hat Display";
+    font-size: 35px;
+    font-weight: 400;
+    line-height: 48px;
+  }
+
+  .esttimetedBoldText {
+    color: var(--Brown-Primary, #966239);
+    font-family: "Red Hat Display";
+    font-size: 35px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 48px;
+  }
+
+  .estimatedcostcard {
+    border: none;
+    background: #f3f4f6;
+    border-radius: 12px;
+    height: 150%;
+  }
+
+  .EstimatedFurniture {
+    color: var(--Neutral-Neutral-900, #191b20);
+    font-family: "Red Hat Display";
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 28px;
+    margin-top: -21px;
+  }
+  .tb-img{
+    width: 100%;
+    height: 60%;
+  }
+  .ch-img{
+    width: 100%;
+    height: 60%;
+  }
+
+  @media screen and (max-width: 768px) {
+>>>>>>> 5d453d3f7c13b279f19e80ebc681f016f8a474ab
     .Card-ui-box {
       width: 100%;
       height: 80vh;
@@ -792,6 +942,7 @@
       background-color: #9ca3af !important;
     }
 
+<<<<<<< HEAD
     .calculator-dropdown {
       display: flex;
       align-items: center;
@@ -839,6 +990,73 @@
       padding: 8px 10px !important;
       clear: both;
       /* color: #354257;
+=======
+  /* ---------------------   - Section DropDown -------------------- */
+
+  .paint-calculator-down {
+    width: 100% !important;
+    max-height: 300px !important;
+    overflow-y: auto;
+  }
+
+  /* contractor-filter-box ScrollBar width control */
+  .paint-calculator-down::-webkit-scrollbar {
+    width: 3px !important;
+  }
+
+  .paint-calculator-down::-webkit-scrollbar-thumb {
+    background-color: #9ca3af !important;
+  }
+
+  .calculator-dropdown {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: #333e50 !important;
+    font-family: Manrope !important;
+    font-size: 12px !important;
+    font-style: normal !important;
+    font-weight: 500 !important;
+    line-height: 22px !important;
+    white-space: nowrap !important;
+    width: 100% !important;
+    text-align: start !important;
+    /* background: #fff !important; */
+    border-radius: 0 !important;
+    padding: 10px 0px 5px 0px !important;
+    border-bottom: 1px solid var(--Neutral-Neutral-100, #F3F4F6);
+    background: var(--Neutral-Neutral-0, #FFF);
+  }
+
+  .contractor-filter-dropdown-option {
+    width: 100%;
+    border-radius: 0 !important;
+    position: absolute !important;
+    top: 100%;
+    left: 0;
+    z-index: 1000;
+    display: none;
+    float: left;
+    min-width: 10rem;
+    padding: 0 !important;
+    /* Adjust padding as needed */
+    margin: 0.2rem 0 !important;
+    font-size: 12px;
+    color: #354257;
+    text-align: left;
+    list-style: none;
+    background-color: #ffffff;
+    background-clip: padding-contractor-filter-box;
+    border: 1px solid #ebf0f9;
+    border-radius: 0.25rem;
+
+  }
+
+  .filter-dropdown-item {
+    padding: 8px 10px !important;
+    clear: both;
+    /* color: #354257;
+>>>>>>> 5d453d3f7c13b279f19e80ebc681f016f8a474ab
         text-align: left;
         background-color: transparent;
         border: 0;
@@ -850,6 +1068,7 @@
         line-height: 22px !important;
         height: auto !important;
         overflow: hidden !important; */
+<<<<<<< HEAD
       word-wrap: break-word !important; /* Ensure this property is present */
       overflow: hidden;
       color: var(--Neutral-Neutral-700, #374151);
@@ -930,6 +1149,116 @@
       font-weight: 400;
       line-height: 24px; /* 171.429% */
     }
+=======
+    word-wrap: break-word !important;
+    /* Ensure this property is present */
+    overflow: hidden;
+    color: var(--Neutral-Neutral-700, #374151);
+    text-overflow: ellipsis;
+    font-family: "Red Hat Display";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 24px;
+    /* 150% */
+
+
+  }
+
+  .filter-dropdown-item:hover {
+    background: var(--brown-100, #f6ede5);
+    color: var(--brown-primary, #966239) !important;
+
+    /* Body/14px: Medium */
+    font-family: "font-red-hat-medium";
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 24px;
+
+  }
+
+  @media (max-width: 767.98px) {
+    .ellip {
+      white-space: nowrap;
+      width: 280px;
+      overflow: hidden;
+      -o-text-overflow: ellipsis;
+      -ms-text-overflow: ellipsis;
+      text-overflow: ellipsis;
+      pointer-events: none;
+      /* Add this line */
+    }
+
+    /* .fill-listlabel{
+          display: none;
+        } */
+  }
+
+  .contractor-filter-dropdown-menu {
+    display: none;
+  }
+
+  .contractor-filter-dropdown-menu.show {
+    display: block;
+  }
+
+  .hidden {
+    display: none;
+  }
+
+  /* Chrome, Safari, Edge, Opera */
+  input::-webkit-outer-spin-button,
+  input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+
+  /* Firefox */
+  input[type="number"] {
+    -moz-appearance: textfield;
+  }
+
+  .form-label {
+    color: var(--Neutral-Neutral-700, #374151);
+    font-family: "Red Hat Display";
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+    /* 171.429% */
+    text-transform: capitalize;
+    padding-top: 10px;
+  }
+
+  .ellip {
+    overflow: hidden;
+    color: var(--Neutral-Neutral-500, #6B7280);
+    text-overflow: ellipsis;
+
+    /* Body/14px: Regular */
+    font-family: "Red Hat Display";
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+    /* 171.429% */
+  }
+
+  /* ---------------------------------ENd Dropdown===================================== */
+  .whoim {
+    overflow: hidden;
+    color: var(--Neutral-Neutral-700, #374151);
+    text-overflow: ellipsis;
+    font-family: "Red Hat Display";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    margin-left: -3px;
+    line-height: 24px;
+    /* 150% */
+  }
+>>>>>>> 5d453d3f7c13b279f19e80ebc681f016f8a474ab
 
     /* ---------------------------------ENd Dropdown===================================== */
     .whoim {
@@ -1051,6 +1380,7 @@
                 </p>
               </div>
             </div>
+<<<<<<< HEAD
             <!-- dropdown ==============================================-->
             <div class="row p-3 selectBoxItomDrop">
               <div class="fill-listlabel">
@@ -1077,6 +1407,57 @@
                     ></ul>
                   </div>
                 </div>
+=======
+            <div class="col">
+              <input type="number" placeholder="Length" class="placeholder-left" id="length3" />
+              <span class="placeholder-right">mtr</span>
+            </div>
+          </div>
+          <!-- end input with length -->
+          <div class="row">
+            <div class="row WrapperRowTextDrop">
+              <p class="textDropdown">
+                Select the Products you want to apply
+              </p>
+            </div>
+          </div>
+          <!-- dropdown ==============================================-->
+          <div class="row p-3 selectBoxItomDrop">
+
+            <div class="fill-listlabel">
+              <div class="mb-3">
+                <!-- <label for="agency" class="form-label"> Select the Products you want to apply</label> -->
+                <!-- first dropdown -->
+                <div class="input-group">
+                  <div id="id_paint_field_calculator-Button" class="calculator-dropdown  dropdown-toggle-split"
+                    type="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <span id="product-paint" class="ellip dropdown-value">Allwood Italian PU White Gloss</span>
+                    <div> <img src="./Images/Vector.png"></div>
+                  </div>
+                  <ul class="contractor-filter-dropdown-menu contractor-filter-dropdown-option paint-calculator-down"
+                    id="id_type_of_paint"></ul>
+                </div>
+              </div>
+            </div>
+
+          </div>
+          <!-- </div> -->
+          <!-- end dropdown==================================================================  -->
+
+          <!-- estimeted cost box start================================================== -->
+
+          <div class="totalAmtCost">
+            <div class="total-first">
+              <div class="textTotalPaint">Total Estimated Paint:</div>
+              <div class="AmountTotalPaint">30 L - 40L</div>
+            </div>
+            <div class="totalEstimetedsecondRow">
+              <div class="textTotalPaint">Total Estimated Cost:</div>
+              <div class="text-end AmountTotalPaint">
+                <span>₹3,000</span>
+                <span>-</span>
+                <span>₹5,000</span>
+>>>>>>> 5d453d3f7c13b279f19e80ebc681f016f8a474ab
               </div>
             </div>
             <!-- </div> -->
@@ -1165,6 +1546,7 @@
                       </div>
                     </div>
                   </div>
+<<<<<<< HEAD
                   <div class="swiper-slide">
                     <div class="card estimatedcostcard" style="width: 18rem">
                       <img
@@ -1183,6 +1565,19 @@
                           <div class="col">
                             <p class="card-text cardtotalft">1569 sq.ft</p>
                           </div>
+=======
+                </div>
+                <div class="swiper-slide">
+                  <div class="card estimatedcostcard" style="width: 18rem">
+                    <img src="./Images/table1a.png" class="card-img-top p-3 tb-img" alt="..." />
+                    <div class="card-body">
+                      <h5 class="card-title EstimatedFurniture">Table</h5>
+                      <div class="row">
+                        <div class="col">
+                          <p class="card-text cardtotallabel">
+                            Total area to be painted
+                          </p>
+>>>>>>> 5d453d3f7c13b279f19e80ebc681f016f8a474ab
                         </div>
                         <div class="row">
                           <div class="col">
@@ -1205,6 +1600,7 @@
                       </div>
                     </div>
                   </div>
+<<<<<<< HEAD
                   <div class="swiper-slide">
                     <div class="card estimatedcostcard" style="width: 18rem">
                       <img
@@ -1223,6 +1619,19 @@
                           <div class="col">
                             <p class="card-text cardtotalft">1569 sq.ft</p>
                           </div>
+=======
+                </div>
+                <div class="swiper-slide">
+                  <div class="card estimatedcostcard" style="width: 18rem">
+                    <img src="./Images/Chair1a.png" class="card-img-top p-3 ch-img" alt="..." />
+                    <div class="card-body">
+                      <h5 class="card-title EstimatedFurniture">Chair</h5>
+                      <div class="row">
+                        <div class="col">
+                          <p class="card-text cardtotallabel">
+                            Total area to be painted
+                          </p>
+>>>>>>> 5d453d3f7c13b279f19e80ebc681f016f8a474ab
                         </div>
                         <div class="row">
                           <div class="col">
@@ -1245,6 +1654,7 @@
                       </div>
                     </div>
                   </div>
+<<<<<<< HEAD
                   <div class="swiper-slide">
                     <div class="card estimatedcostcard" style="width: 18rem">
                       <img
@@ -1263,6 +1673,19 @@
                           <div class="col">
                             <p class="card-text cardtotalft">1569 sq.ft</p>
                           </div>
+=======
+                </div>
+                <div class="swiper-slide">
+                  <div class="card estimatedcostcard" style="width: 18rem">
+                    <img src="./Images/couch.png" class="card-img-top p-3 ch-img" alt="..." />
+                    <div class="card-body">
+                      <h5 class="card-title EstimatedFurniture">Couch</h5>
+                      <div class="row">
+                        <div class="col">
+                          <p class="card-text cardtotallabel">
+                            Total area to be painted
+                          </p>
+>>>>>>> 5d453d3f7c13b279f19e80ebc681f016f8a474ab
                         </div>
                         <div class="row">
                           <div class="col">
@@ -1285,6 +1708,7 @@
                       </div>
                     </div>
                   </div>
+<<<<<<< HEAD
                   <div class="swiper-slide">
                     <div class="card estimatedcostcard" style="width: 18rem">
                       <img
@@ -1303,6 +1727,19 @@
                           <div class="col">
                             <p class="card-text cardtotalft">1569 sq.ft</p>
                           </div>
+=======
+                </div>
+                <div class="swiper-slide">
+                  <div class="card estimatedcostcard" style="width: 18rem">
+                    <img src="./Images/Drawers.png" class="card-img-top p-3 ch-img" alt="..." />
+                    <div class="card-body">
+                      <h5 class="card-title EstimatedFurniture">Drawers</h5>
+                      <div class="row">
+                        <div class="col">
+                          <p class="card-text cardtotallabel">
+                            Total area to be painted
+                          </p>
+>>>>>>> 5d453d3f7c13b279f19e80ebc681f016f8a474ab
                         </div>
                         <div class="row">
                           <div class="col">
@@ -1325,6 +1762,7 @@
                       </div>
                     </div>
                   </div>
+<<<<<<< HEAD
                   <div class="swiper-slide">
                     <div class="card estimatedcostcard" style="width: 18rem">
                       <img
@@ -1343,6 +1781,19 @@
                           <div class="col">
                             <p class="card-text cardtotalft">1569 sq.ft</p>
                           </div>
+=======
+                </div>
+                <div class="swiper-slide">
+                  <div class="card estimatedcostcard" style="width: 18rem">
+                    <img src="./Images/BookShelf.png" class="card-img-top p-3 ch-img" alt="..." />
+                    <div class="card-body">
+                      <h5 class="card-title EstimatedFurniture">BookShelf</h5>
+                      <div class="row">
+                        <div class="col">
+                          <p class="card-text cardtotallabel">
+                            Total area to be painted
+                          </p>
+>>>>>>> 5d453d3f7c13b279f19e80ebc681f016f8a474ab
                         </div>
                         <div class="row">
                           <div class="col">
@@ -1365,6 +1816,7 @@
                       </div>
                     </div>
                   </div>
+<<<<<<< HEAD
                   <div class="swiper-slide">
                     <div class="card estimatedcostcard" style="width: 18rem">
                       <img
@@ -1383,6 +1835,19 @@
                           <div class="col">
                             <p class="card-text cardtotalft">1569 sq.ft</p>
                           </div>
+=======
+                </div>
+                <div class="swiper-slide">
+                  <div class="card estimatedcostcard" style="width: 18rem">
+                    <img src="./Images/Door.png" class="card-img-top p-3 ch-img" alt="..." />
+                    <div class="card-body">
+                      <h5 class="card-title EstimatedFurniture">Door</h5>
+                      <div class="row">
+                        <div class="col">
+                          <p class="card-text cardtotallabel">
+                            Total area to be painted
+                          </p>
+>>>>>>> 5d453d3f7c13b279f19e80ebc681f016f8a474ab
                         </div>
                         <div class="row">
                           <div class="col">
@@ -1405,6 +1870,7 @@
                       </div>
                     </div>
                   </div>
+<<<<<<< HEAD
                   <div class="swiper-slide">
                     <div class="card estimatedcostcard" style="width: 18rem">
                       <img
@@ -1423,6 +1889,19 @@
                           <div class="col">
                             <p class="card-text cardtotalft">1569 sq.ft</p>
                           </div>
+=======
+                </div>
+                <div class="swiper-slide">
+                  <div class="card estimatedcostcard" style="width: 18rem">
+                    <img src="./Images/bed1a.png" class="card-img-top p-3 ch-img" alt="..." />
+                    <div class="card-body">
+                      <h5 class="card-title EstimatedFurniture">Bed</h5>
+                      <div class="row">
+                        <div class="col">
+                          <p class="card-text cardtotallabel">
+                            Total area to be painted
+                          </p>
+>>>>>>> 5d453d3f7c13b279f19e80ebc681f016f8a474ab
                         </div>
                         <div class="row">
                           <div class="col">
@@ -1939,18 +2418,18 @@
     });
 
 
-    function ShowCal(title,destinationId) {
+    function ShowCal(title, destinationId) {
       console.log(title);
       var slideIndex = getSlideIndexByTitle(title);
 
       swiper.slideTo(slideIndex);
 
       const itemId = document.getElementById(destinationId);
-      if(itemId){
-        itemId.scrollIntoView({behavior:"smooth"});
-      }else {
+      if (itemId) {
+        itemId.scrollIntoView({ behavior: "smooth" });
+      } else {
         console.error("Destination element not found:", destinationId);
-    }
+      }
     }
 
     function getSlideIndexByTitle(title) {
@@ -2095,6 +2574,7 @@
       let nameOfProduct = document.querySelectorAll(".nameofproductpopup");
       let kuchbhileloyr = document.querySelectorAll(".kuchbhileloyr");
 
+<<<<<<< HEAD
       let incre1 = document.getElementById("incre1");
       let incre2 = document.getElementById("incre2");
       let incre3 = document.getElementById("incre3");
@@ -2155,6 +2635,20 @@
       // dropdown.style.display = "block";
       // }
       // }
+=======
+    // desktop dropdown
+    // function toggleDropdown() {
+    //  Get the dropdown element
+    // const dropdown = document.querySelector(".box");
+
+    //  Toggle the display of the dropdown
+    // if (dropdown.style.display === "block") {
+    // dropdown.style.display = "none";
+    // } else {
+    // dropdown.style.display = "block";
+    // }
+    // }
+>>>>>>> 5d453d3f7c13b279f19e80ebc681f016f8a474ab
 
       let cnt = 0;
       let cnt2 = 0;
@@ -2494,74 +2988,102 @@
 
       // ==============================dropdown================================
 
+<<<<<<< HEAD
       function paintDrop() {
         function initializeDropdown(buttonId, menuId, valueId, options) {
           var dropdownButton = document.getElementById(buttonId);
           var dropdownMenu = document.getElementById(menuId);
           var valueElement = document.getElementById(valueId);
+=======
 
-          dropdownButton.addEventListener("click", function (event) {
-            event.stopPropagation(); // Preventing event from bubbling up
 
-            // Close all other dropdown menus
-            closeAllDropdowns();
 
-            dropdownMenu.classList.toggle("show");
-          });
+      // })
 
-          valueElement.addEventListener("click", function (event) {
-            event.stopPropagation(); // Preventing event from bubbling up
+    }
+    let length1 = document.getElementById('length1')
+    let length2 = document.getElementById('length2')
+    let length3 = document.getElementById('length3')
+    function dbs() {
 
-            // Close all other dropdown menus
-            closeAllDropdowns();
+      console.log(length1.value, length2.value, length3.value)
+    }
 
-            dropdownMenu.classList.toggle("show");
-          });
 
-          dropdownMenu
-            .querySelectorAll(".filter-dropdown-item")
-            .forEach(function (item) {
-              item.addEventListener("click", function (event) {
-                event.stopPropagation(); // Preventing event from bubbling up
-                valueElement.textContent = this.textContent;
-                dropdownMenu.classList.remove("show");
-              });
-            });
+    // ==============================dropdown================================
 
-          // Adding event listener to close dropdown when clicking outside
-          document.addEventListener("click", function (event) {
-            if (
-              !event.target.matches("#" + buttonId) &&
-              !event.target.matches(".filter-dropdown-item")
-            ) {
+
+
+
+    function paintDrop() {
+      function initializeDropdown(buttonId, menuId, valueId, options) {
+        var dropdownButton = document.getElementById(buttonId);
+        var dropdownMenu = document.getElementById(menuId);
+        var valueElement = document.getElementById(valueId);
+>>>>>>> 5d453d3f7c13b279f19e80ebc681f016f8a474ab
+
+        dropdownButton.addEventListener("click", function (event) {
+          event.stopPropagation(); // Preventing event from bubbling up
+
+          // Close all other dropdown menus
+          closeAllDropdowns();
+
+          dropdownMenu.classList.toggle("show");
+        });
+
+        valueElement.addEventListener("click", function (event) {
+          event.stopPropagation(); // Preventing event from bubbling up
+
+          // Close all other dropdown menus
+          closeAllDropdowns();
+
+          dropdownMenu.classList.toggle("show");
+        });
+
+        dropdownMenu
+          .querySelectorAll(".filter-dropdown-item")
+          .forEach(function (item) {
+            item.addEventListener("click", function (event) {
+              event.stopPropagation(); // Preventing event from bubbling up
+              valueElement.textContent = this.textContent;
               dropdownMenu.classList.remove("show");
-            }
-          });
-
-          // Populate options
-          options.forEach(function (option) {
-            let li = document.createElement("li");
-            li.classList.add("filter-dropdown-item");
-            li.textContent = option;
-            dropdownMenu.appendChild(li);
-            // Add option click event listener
-            li.addEventListener("click", function () {
-              valueElement.textContent = option;
-              dropdownMenu.classList.remove("show");
             });
           });
 
-          // Function to close all dropdown menus
-          function closeAllDropdowns() {
-            document
-              .querySelectorAll(".contractor-filter-dropdown-menu")
-              .forEach(function (menu) {
-                if (menu !== dropdownMenu) {
-                  menu.classList.remove("show");
-                }
-              });
+        // Adding event listener to close dropdown when clicking outside
+        document.addEventListener("click", function (event) {
+          if (
+            !event.target.matches("#" + buttonId) &&
+            !event.target.matches(".filter-dropdown-item")
+          ) {
+            dropdownMenu.classList.remove("show");
           }
+        });
+
+        // Populate options
+        options.forEach(function (option) {
+          let li = document.createElement("li");
+          li.classList.add("filter-dropdown-item");
+          li.textContent = option;
+          dropdownMenu.appendChild(li);
+          // Add option click event listener
+          li.addEventListener("click", function () {
+            valueElement.textContent = option;
+            dropdownMenu.classList.remove("show");
+          });
+        });
+
+        // Function to close all dropdown menus
+        function closeAllDropdowns() {
+          document
+            .querySelectorAll(".contractor-filter-dropdown-menu")
+            .forEach(function (menu) {
+              if (menu !== dropdownMenu) {
+                menu.classList.remove("show");
+              }
+            });
         }
+<<<<<<< HEAD
 
         // Define the list of options for each dropdown
         let allwood_Products = [
@@ -2584,3 +3106,40 @@
     </script>
   </body>
 </html>
+=======
+      }
+
+      // Define the list of options for each dropdown
+      let allwood_Products = [
+        "Allwood Italian PU Clear Gloss",
+        "Allwood Italian PU Clear Matt",
+        "Allwood Italian PU White Gloss",
+        "Allwood Italian PU White Matt",
+        "Allwood Thinners",
+      ];
+
+
+
+
+
+
+      // Initialize each dropdown using the initializeDropdown function
+      initializeDropdown(
+        "id_paint_field_calculator-Button",
+        "id_type_of_paint",
+        "product-paint",
+        allwood_Products
+      );
+
+    }
+    paintDrop();
+
+
+
+  </script>
+
+
+</body>
+
+</html>
+>>>>>>> 5d453d3f7c13b279f19e80ebc681f016f8a474ab
