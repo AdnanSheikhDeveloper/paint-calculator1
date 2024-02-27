@@ -1565,11 +1565,18 @@
     });
 
 
-    function ShowCal(title) {
+    function ShowCal(title,destinationId) {
       console.log(title);
       var slideIndex = getSlideIndexByTitle(title);
 
       swiper.slideTo(slideIndex);
+
+      const itemId = document.getElementById(destinationId);
+      if(itemId){
+        itemId.scrollIntoView({behavior:"smooth"});
+      }else {
+        console.error("Destination element not found:", destinationId);
+    }
     }
 
     function getSlideIndexByTitle(title) {
@@ -1918,9 +1925,10 @@
           console.log(item)
           console.log(key)
           console.log(item[key]);
+          const destinationId = `destination-${key}`
           for (let i = 0; i < item[key]; i++) {
             listOfItems.innerHTML += `
-          <a class="calc-select-btn" onclick="ShowCal('${key}')">
+          <a class="calc-select-btn" onclick="ShowCal('${key}','${destinationId}')">
             <span class="calc-btn-text calc-chairbtn">
               ${key}
             </span>
