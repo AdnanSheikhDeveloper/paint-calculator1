@@ -41,7 +41,8 @@
     -webkit-text-fill-color: transparent;
     border: none;
     border-radius: 18px;
-    margin-right: -14px;
+    margin-top: -6px;
+    /* margin-right: -14px; */
     padding: 4px 12px;
     align-items: center;
     width: 138px;
@@ -160,6 +161,15 @@
 
   /* ===============total amount ===========row */
   .totalAmtCost {
+    /* width: 45em;
+    border-radius: 16px;
+    border: 1px solid var(--Orange-100, #f7c48d);
+    background: var(--Neutral-Neutral-0, #fff);
+    margin-top: 8%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 16px; */
     border-radius: 16px;
     border: 1px solid var(--Orange-100, #f7c48d);
     background: var(--Neutral-Neutral-0, #fff);
@@ -269,9 +279,9 @@
   .horizontal-scroll {
     display: flex;
     gap: 8px;
-    width: 98%;
+    width: 97%;
     overflow-x: auto;
-    margin-left: 11px;
+    margin-left: 8px;
     align-items: center;
     padding: 4px;
     transition: overflow-x 0.3s ease-in-out;
@@ -352,18 +362,33 @@
     .row-total-first {
       padding-right: 0 !important;
     }
+
     #doorlockbtn1.active,
-  #doorlockbtn8.active,
-  #doorlockbtn2.active,
-  #doorlockbtn7.active,
-  #doorlockbtn3.active,
-  #doorlockbtn6.active,
-  #doorlockbtn4.active,
-  #doorlockbtn5.active {
-    margin-right: -136px;
-    
+    #doorlockbtn8.active,
+    #doorlockbtn2.active,
+    #doorlockbtn7.active,
+    #doorlockbtn3.active,
+    #doorlockbtn6.active,
+    #doorlockbtn4.active,
+    #doorlockbtn5.active {
+      margin-right: -136px;
+
+    }
   }
-  }
+
+  /* @media (max-width: 1440px) {
+    .totalAmtCost {
+    width: 45em;
+    border-radius: 16px;
+    border: 1px solid var(--Orange-100, #f7c48d);
+    background: var(--Neutral-Neutral-0, #fff);
+    margin-top: 8%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 16px;}
+  } */
+
 
   /* card style here======================================== */
   /* ========================================================= */
@@ -1556,7 +1581,7 @@
         }
       }
 
-      return 0; 
+      return 0;
     }
 
     // Popup MEnu===========================================
@@ -1638,7 +1663,7 @@
       })
       ImgID.classList.add('active');
 
-      
+
       // setTimeout(()=>{
 
       //   ImgID.classList.remove('active');
@@ -1913,9 +1938,9 @@
       incre6.innerHTML = 0
       incre7.innerHTML = 0
       incre8.innerHTML = 0
-      
 
-        popup.style.display = "none";
+
+      popup.style.display = "none";
 
       // const objKeys = arr.map((obj1,ind)=>Object.keys(obj1)[ind]);
       // console.log(objKeys);
